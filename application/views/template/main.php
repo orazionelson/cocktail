@@ -25,15 +25,18 @@
   <meta name="description" content="__SITE DESCRIPTION HERE__">
   <?php endif;?>
 
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="<?php echo base_url()?>css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>css/bootstrap-theme.min.css">
   <?php /* codeigniter-boilerplate: Styles **********************************/ ?>
-  <link rel="stylesheet" href="<?php echo base_url()?>css/normalize.css">
-  <link rel="stylesheet" href="<?php echo base_url()?>css/style.css">
+  <!--link rel="stylesheet" href="<?php echo base_url()?>css/normalize.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>css/style.css"-->
   <?php foreach($css as $c):?>
   <link rel="stylesheet" href="<?php echo base_url()?>css/<?php echo $c?>">
   <?php endforeach;?>
 
-  <script src="<?php echo base_url()?>js/vendor/modernizr-2.6.1.min.js"></script>
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
   <?php /* codeigniter-boilerplate: Google Fonts ****************************/ ?>
   <?php foreach($GFont as $f):?>
@@ -52,7 +55,7 @@
     echo $nav
     ?>
     </header>
-    <div id="main" role="main">
+    <div id="main" role="main" class="container">
     <?php
     /* codeigniter-boilerplate: content from single views *********************/
     echo $content
