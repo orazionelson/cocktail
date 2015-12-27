@@ -23,7 +23,7 @@ Class BP_Portfolio {
 		$data=$this->portfolio;
 		//var_dump($data);
 		
-		$myportfolio= '<div class="container">';
+		$myportfolio= '<div>';
 		$myportfolio.= $this->openNav();
 
 			$myportfolio.= '<div class="'.$this->makeSingular($this->navigation).'-content">';

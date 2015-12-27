@@ -54,9 +54,8 @@ $(document).ready(function() {
 			}); 
 			});
 		}
-});
 
-$(document).ready(function ($) {
+//Lightbox
 	// delegate calls to data-toggle="lightbox"
 	$(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
 		event.preventDefault();

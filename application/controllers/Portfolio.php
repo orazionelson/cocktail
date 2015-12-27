@@ -19,7 +19,7 @@ class Portfolio extends BP_Controller {
         // Import Google Font 
         $this->GFont = array("Oxygen");
         
-        $this->portfolio = array(
+        $portfolio = array(
 			'navigation'=>'tabs', //set tabs or pills
 			'columns'=>'4', //set 2,3 or 4 columns
 			2013=>array(
@@ -33,7 +33,7 @@ class Portfolio extends BP_Controller {
 				array('label'=>'project_threebis','name'=>'Project 3bis','description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."),
 				array('label'=>'project_fourbis','name'=>'Project 4bis','description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."),
 				),
-		2014=>array(
+			2014=>array(
 				array('label'=>'project_four','name'=>'Project 4','description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."),
 				array('label'=>'project_five','name'=>'Project 5','description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."),
 				array('label'=>'project_siz','name'=>'Project 6','description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."),
@@ -44,9 +44,9 @@ class Portfolio extends BP_Controller {
 
         //Create portfolio.
         $myportfolio=new BP_Portfolio;
-        $myportfolio->portfolio=$this->portfolio;
+        $myportfolio->portfolio=$portfolio;
         
-        //Pass to the page
+        //Pass to the page the parsed portfolio
         $toView["portfolio"] = $myportfolio->createPortfolio();
 
         /*short cut to load->view("pages/page_name",$content,true)*/
