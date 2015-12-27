@@ -30,9 +30,9 @@
 	<h2>About</h2>
 	<p><span class="lead">Cocktail</span> is a fast front-end builder. It takes the basic code by <a href="http://ariok.github.io/codeigniter-boilerplate/">Codeigniter-Boilerplate</a> but upgrades Codeigniter to version 3 and HTML5Boileplate to the v. 5. Then it adds Bootstrap (v.3) and some useful scripts:</p>
 	<ul>
-		<li>jQuery 1.11.2</li>
+		<li><a href="https://jquery.com/">jQuery 1.11.2</a>,</li>
 		<li><a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome 4.0.5</a> <i class="fa fa-fonticons fa-lg"></i>,</li>
-		<li>DataTables,</li> 
+		<li><a href="https://datatables.net/">DataTables</a>,</li> 
 		<li>Bootstrap Validator.</li>
 	</ul>
 	<p>And some 'ad hoc' helpers and functions for page rendering.</p>

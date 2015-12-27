@@ -1,8 +1,7 @@
 <div class="clearfix"></div>
+
 <div class="container">
 	<h2>DataTables Bundle</h2>
-	
-	
 	<div class="container">
 		<h3>This is a common table</h3>
 		<p>A common <code>table</code> themed with bootstrap classes</p>

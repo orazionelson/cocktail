@@ -90,54 +90,6 @@ class BP_Controller extends CI_Controller{
     public function get_template(){  
         return $this->template;
     }
-    
-     public function dataTables(){
-		$data=$this->datatables;
-	   foreach($data as $k=>$mask){
-		if(isset($mask['title'])){$title=$mask['title'];}
-		else $title=ucfirst($mask['id']);
-		
-	   $table='
-	   <div class="container">
-	   <h3>'.$title.'</h3>	
-	   <p>'.$mask['caption'].'</p>	
-	   <table id="'.$mask['id'].'" class="'.$mask['class'].' bp-'.$mask['driver'].'-data-table">
-	        <thead>
-	            <tr>';
-				foreach($mask['fields'] as $field){
-					$table.="\n\t<th>".$field."</th>";
-					}         
-	   $table.= '        </tr>
-	        </thead>
-	        <tfoot>
-	            <tr>';
-				foreach($mask['fields'] as $field){
-					$table.="\n\t<th>".$field."</th>";
-					}         
-	   $table.='</tr>
-	        </tfoot>
-		</table>
-		</div>';
-		if($mask['driver']=='array'){
-			$content = $this->get_JsonData($mask['id']);
-			$data=json_encode($content->data);
-			$table.="<div id=\"".$mask['id']."data\" class=\"hide\">".$data."</div>";
-			}
-		$tables[$k]=$table;   
-		}
-		//var_dump($tables);
-		$table=implode("\n",$tables);
-			   return $table;
-
-	   }
-	   
-	   	private function get_JsonData($source){
-		$json = file_get_contents('data/'.$source.'.json'); 
-		$data=json_decode($json);						
-		return $data;
-	}
-
-    
 }
 
 /*End of file BP_Controller.php*/

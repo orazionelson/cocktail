@@ -41,8 +41,10 @@ class Datatables extends BP_Controller {
 
         //Somedata for the page.
         //$toView["day"] = strftime("%A",strtotime("today"));
-        
-        $toView["datatables"] = $this->dataTables();
+        $toDt["data"] = $this->datatables;
+        $toView["datatables"] = $this->load->view("template/datatables",$toDt,true);
+
+        //$toView["datatables"] = $this->dataTables();
 
         /*short cut to load->view("pages/page_name",$content,true)*/
         $this->build_content($toView);
