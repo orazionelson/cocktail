@@ -7,6 +7,7 @@ body {
     position: relative;
 	padding-top: 50px;
 	padding-bottom: 20px;
+	font-family:"Oxygen";
 }
 
 article {
@@ -15,6 +16,16 @@ article {
 
 .portfolio-block {
 	margin-top: 60px;
+}
+
+.jumbotron h1{
+font-family:"Lily Script One";
+color: #808000;
+}
+
+.jumbotron{
+background-color: #DEDEDE;
+display:block;
 }
 
 /*a {

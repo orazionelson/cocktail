@@ -12,7 +12,7 @@ class Homepage extends BP_Controller {
         $this->javascript = array("homepage.js");
         */
         $this->css = array("BP/homepage.css");
-        $this->GFont = array("Lobster","Puritan");
+        $this->GFont = array("Lily Script One","Oxygen");
 
         /*Define single page content as usual*/
         $toView['page_content'] = date("H:i:s");
