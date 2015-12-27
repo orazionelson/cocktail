@@ -33,6 +33,7 @@
 		<li><a href="https://jquery.com/">jQuery 1.11.2</a>,</li>
 		<li><a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome 4.0.5</a> <i class="fa fa-fonticons fa-lg"></i>,</li>
 		<li><a href="https://datatables.net/">DataTables</a>,</li> 
+		<li><a href="http://ashleydw.github.io/lightbox/">Bootstrap Lightbox</a>,</li> 
 	</ul>
 	<p>And some 'ad hoc' helpers and functions for page rendering:</p>
 	<ul>

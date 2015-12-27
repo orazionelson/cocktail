@@ -1,4 +1,5 @@
-<?php
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 Class BP_Portfolio {
 	var $portfolio=array();
 	var $cols;
@@ -9,15 +10,7 @@ Class BP_Portfolio {
 	
 	function __construct()
 	{
-		//parent::__construct();
 	}
-	
-	//function pageContent(){
-		//$content = $this->getData('portfolio');
-		//$content.= $this->createPortfolio();
-		//	
-		//return $content;
-	//}
 	
 	function createPortfolio(){
 		

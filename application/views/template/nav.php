@@ -22,9 +22,9 @@ else {$anchor='homepage';}
         <li class="dropdown">
               <a href="<?php echo base_url()?>examples" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="<?php echo base_url()?>datatables">DataTables</a></li>
-                <li><a href="<?php echo base_url()?>portfolio">Portfolio</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li class="<?php echo isActive($page_id,"datatables")?>"><a href="<?php echo base_url()?>datatables">DataTables</a></li>
+                <li class="<?php echo isActive($page_id,"portfolio")?>"><a href="<?php echo base_url()?>portfolio">Portfolio</a></li>
+                <li class="<?php echo isActive($page_id,"gallery")?>"><a href="<?php echo base_url()?>gallery">Gallery</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Nav header</li>
                 <li><a href="#">Separated link</a></li>

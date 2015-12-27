@@ -29,7 +29,7 @@
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="<?php echo base_url()?>css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php echo base_url()?>css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>css/bootstrap-theme.css">
   <?php /* codeigniter-boilerplate: Styles **********************************/ ?>
   <!--link rel="stylesheet" href="<?php echo base_url()?>css/normalize.css">
   <link rel="stylesheet" href="<?php echo base_url()?>css/style.css"-->
@@ -85,16 +85,15 @@
   <script>window.jQuery || document.write('<script src="<?php echo base_url()?>js/vendor/jquery-1.11.2.js"><\/script>')</script>
   <script src="<?php echo base_url()?>js/vendor/bootstrap.min.js"></script>
 
+  <?php /* cocktail: Scripts *********************************/?>
+  <?php foreach($javascript as $js):?>
+  <script src="<?php echo base_url()?>js/vendor/<?php echo $js?>"></script>
+  <?php endforeach;?>
+  
   <!-- scripts concatenated and minified via ant build script-->
   <script src="<?php echo base_url()?>js/plugins.js"></script>
   <script src="<?php echo base_url()?>js/main.js"></script>
   <!-- end scripts-->
-
-  <?php /* codeigniter-boilerplate: Scripts *********************************/?>
-  <?php foreach($javascript as $js):?>
-  <script src="<?php echo base_url()?>js/vendor/<?php echo $js?>"></script>
-  <?php endforeach;?>
-
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
       <script>
           var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
