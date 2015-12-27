@@ -9,21 +9,21 @@
       <div class="row">
         <div class="col-lg-4">
           <img class="img-circle" src="images/codeigniter.png" alt="Get the fuel from codeigniter" width="140" height="140">
-          <h2>Codeigniter</h2>
+          
           <p>Get the fuel with <a href="https://www.codeigniter.com/">Codeigniter</a> MVC framework.</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="images/boilerplate.png" alt="Shake with HTML5Boilerplate best practices" width="140" height="140">
-          <h2>HTML5Boilerplate</h2>
+          
           <p>Shake with <a href="https://html5boilerplate.com/">HTML5Boilerplate</a> best practices.</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="images/bootstrap.png" alt="Generic placeholder image" width="140" height="140">
-          <h2>Bootstrap</h2>
+          
           <p>Serve gracefully with <a href="http://getbootstrap.com/">Bootstrap</a> and more.</p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-      <div><p><a class="btn btn-default" href="#" role="button">Download Cocktail</a> <a class="btn btn-default" href="#" role="button">View on github</a></p></div>
+      <div><p><a class="btn btn-default" href="https://github.com/orazionelson/cocktail/archive/master.zip" role="button">Download Cocktail</a> <a class="btn btn-default" href="https://github.com/orazionelson/cocktail" role="button">View on github</a></p></div>
 	</div>
 </div>
 <div id="about" class="container"><article>
@@ -33,13 +33,14 @@
 		<li><a href="https://jquery.com/">jQuery 1.11.2</a>,</li>
 		<li><a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome 4.0.5</a> <i class="fa fa-fonticons fa-lg"></i>,</li>
 		<li><a href="https://datatables.net/">DataTables</a>,</li> 
-		<li>Bootstrap Validator.</li>
 	</ul>
-	<p>And some 'ad hoc' helpers and functions for page rendering.</p>
+	<p>And some 'ad hoc' helpers and functions for page rendering:</p>
+	<ul>
+		<li>Portfolio</li>
+	</ul>	
 	
-	<p>Other libraries: Data Tables, Gallery, Font Awesome, Equal size, Modal Boxjs. </p>
-	<p>Ad hoc helpers: Porfolio, Page presentation: dynamic menu, tabs, pills, accordion, </p>
-	<p>Examples: single scrolling page, Data tables Bundle, Porfolio Builder, </p>
+	<p>Other libraries to include: Bootstrap Validator, Gallery, Equal size, Modal Boxjs. </p>
+	<p>Ad hoc helpers to write: Page presentation: dynamic menu, tabs, pills, accordion, </p>
 </article>
 
 </div>
@@ -83,25 +84,15 @@ Praesent convallis magna in nulla varius, nec mollis quam faucibus. Morbi non eu
 
 </ul>
 
-
-<h3>Technical notes</h3>
-<ul>
-    <li>Codeigniter Version: 2.1</li>
-    <li>JQuery Version: 1.8.0</li>
-    <li>HTML5 BP Version: 4.0</li>
-    <li>Modernizr Version: 2.6.0</li>
-</ul>
-
 <h3>CI Configurations</h3>
 <p>Codeigniter configuration for Boilerplate starts with:</p>
 <ul>
     <li>Autoload: url helper</li>
     <li>Routes: default_controller = "homepage"</li>
     <li>Index.php: subclass_prefix = "BP_"</li>
-    <li>Base url: http://localhost/codeigniter-boilerplate</li>
+    <li>Base url: http://localhost/cocktail</li>
 </ul>
 <br>
 
-<img src="<?php echo base_url('images/BP/logo.png')?>" id="logo"/>
 
 <?php echo $other_data?>
