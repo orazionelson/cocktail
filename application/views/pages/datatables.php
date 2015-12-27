@@ -2,7 +2,7 @@
 
 <div class="container">
 	<h2>Static Tables and DataTables</h2>
-	<div class="container">
+
 		<h3>This is a common table</h3>
 		<p>A common <code>table</code> themed with bootstrap classes</p>
 		<table class="table table-striped table-hover">
@@ -31,8 +31,8 @@
 				</tr>
 			</tbody>
 	  </table>
-	</div>
-	<div class="container">
+
+	
 		<h3>Data Table Bundle</h3>
 		<p>You can extend table functionalities with DataTables</p>
 		<p>Add the js and the css to the controller</p>
@@ -69,7 +69,7 @@ $this->javascript = array('jquery.dataTables.min.js','dataTables.bootstrap.min.j
 				</tr>
 			</tbody>
 		</table>
-	</div>
+	
 	<h2>Dynamic DataTables</h2>
 	<p>Your can also build DataTables using a configuration array and a json file.</p>
 	<p>First save your json file in the <code>data/</code> directory, the file has to be formatted according to the DataTables standard (<a href="https://www.datatables.net/examples/data_sources/ajax.html">more info</a>).</p>
