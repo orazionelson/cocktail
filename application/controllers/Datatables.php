@@ -13,9 +13,6 @@ class Datatables extends BP_Controller {
         $this->title = "DataTables";
         $this->description = "DataTables bundle!";
 
-        // Import Google Font 
-        $this->GFont = array("Oxygen");
-
         // Define custom CSS
         $this->css = array("dataTables.bootstrap.min.css");
 		$this->javascript = array('jquery.dataTables.min.js','dataTables.bootstrap.min.js');

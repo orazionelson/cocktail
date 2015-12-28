@@ -18,17 +18,21 @@ else {$anchor='homepage';}
         <li class="<?php echo isActive($page_id,"homepage")?>"><a href="<?php echo  base_url()?>homepage">Home</a></li>
         <li><a href="<?php echo $anchor; ?>#about">About</a></li>
         <li><a href="<?php echo $anchor; ?>#contacts">Contacts</a></li>
-        <li class="<?php echo isActive($page_id,"example")?>"><a href="<?php echo base_url()?>example">Example</a></li>
         <li class="dropdown">
               <a href="<?php echo base_url()?>examples" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples<span class="caret"></span></a>
               <ul class="dropdown-menu">
+				<li class="dropdown-header">Components</li>  
                 <li class="<?php echo isActive($page_id,"datatables")?>"><a href="<?php echo base_url()?>datatables">DataTables</a></li>
-                <li class="<?php echo isActive($page_id,"portfolio")?>"><a href="<?php echo base_url()?>portfolio">Portfolio</a></li>
                 <li class="<?php echo isActive($page_id,"gallery")?>"><a href="<?php echo base_url()?>gallery">Gallery</a></li>
                 <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li class="dropdown-header">Pages</li> 
+				<li class="<?php echo isActive($page_id,"example")?>"><a href="<?php echo base_url()?>example">Base Example</a></li>                 
+                <li class="<?php echo isActive($page_id,"automatictoc")?>"><a href="<?php echo base_url()?>automatictoc">Automatic Toc</a></li>
+                <li class="<?php echo isActive($page_id,"portfolio")?>"><a href="<?php echo base_url()?>portfolio">Portfolio</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Helpers</li>
+                <li><a href="#">Pretty-pre</a></li>
+                <!--li><a href="#">One more separated link</a></li-->
               </ul>
             </li>
           </ul>

@@ -12,12 +12,6 @@ class Portfolio extends BP_Controller {
         // Define Meta
         $this->title = "Portfolio";
         $this->description = "portfolio template!";
-
-        // Define custom CSS
-        //$this->css = array("dataTables.bootstrap.min.css");
-		//$this->javascript = array('jquery.dataTables.min.js','dataTables.bootstrap.min.js');
-        // Import Google Font 
-        $this->GFont = array("Oxygen");
         
         $portfolio = array(
 			'navigation'=>'tabs', //set tabs or pills

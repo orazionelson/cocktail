@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Example extends BP_Controller {
+class Automatictoc extends BP_Controller {
 
     public function index()
     {
@@ -9,14 +9,11 @@ class Example extends BP_Controller {
         */
 
         // Define Meta
-        $this->title = "Example!";
-        $this->description = "A Codeigniter-Boilerplate example";
+        $this->title = "Automatic Toc!";
+        $this->description = "Get TOC by the page structure";
 
         // Define custom CSS
-        $this->css = array("BP/homepage.css","BP/example.css");
-
-        // Import Google Font Lobster and Puritan
-        $this->GFont = array("Lobster","Puritan");
+        $this->javascript = array("prettypre.jquery.js");
 
         //Somedata for the page.
         $toView["day"] = strftime("%A",strtotime("today"));

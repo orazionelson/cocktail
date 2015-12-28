@@ -21,7 +21,7 @@ class BP_Controller extends CI_Controller{
     //Page contents
     public $javascript = array();
     public $css = array();
-    public $GFont = array();
+    public $GFont = array('Oxygen');
     public $content = false;
     //Page Meta
     public $title = false;

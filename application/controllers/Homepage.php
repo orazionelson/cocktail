@@ -9,7 +9,7 @@ class Homepage extends BP_Controller {
     public function index()
     {
         /*Page dedicated JS - CSS - Google Fonts*/
-        $this->GFont = array("Lily Script One","Oxygen");
+        $this->GFont = array("Lily Script One",'Oxygen');
 
         /*Define single page content as usual*/
         $toView['page_content'] = date("H:i:s");

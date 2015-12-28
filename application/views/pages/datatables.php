@@ -87,9 +87,9 @@ $this->datatables=
 				),
 	);	
 	</pre>
-	<p class="well">Be careful: the <code>driver</code> is a very important option for your rendering. Set it to <code>array</code> to parse the json file with php and then pass it to DataTables javascript. Set the driver to <code>file</code> if you want to pass directly the json file to DataTables.</p>
+	<p class="well">Be careful: the <code>driver</code> option rules the way you harvest data form the json file. Set it to <code>array</code> to parse the json file with <em>PHP</em> and then pass it to DataTables javascript (Server-side). Set the driver to <code>file</code> if you want to pass directly the json file to DataTables (Client-side).</p>
 	<p class="well">Be careful: this array is multidimesional, so you can render a cluster of tables.</p>
-	<p>Then, render the result by passing your data to the DataTables template.</p>
+	<p>Then, get the result by passing your data to the DataTables template.</p>
 	<pre>
 $toDt["data"] = $this->datatables;
 $toView["datatables"] = $this->load->view("template/datatables",$toDt,true);

@@ -29,16 +29,18 @@
 <div id="about" class="container">
 	<article>
 		<h2>About</h2>
-		<p><span class="lead">Cocktail</span> is a fast front-end builder. It takes the basic code by <a href="http://ariok.github.io/codeigniter-boilerplate/">Codeigniter-Boilerplate</a> but upgrades Codeigniter to version 3, HTML5Boileplate to the v. 5 and jQuery to v.1.11.2. Then it adds Bootstrap (v.3) and some useful bundles.</p>
+		<p><span class="lead">Cocktail</span> is a fast front-end builder. It takes the basic code by <a href="http://ariok.github.io/codeigniter-boilerplate/">Codeigniter-Boilerplate</a> but upgrades Codeigniter to version 3, HTML5Boileplate to the v. 5 and jQuery to v.1.11.2. Then it adds Bootstrap (v.3) and bundles several scripts to improve your job.</p>
 		<ul>
 			<li>Extend Bootstrap icons with <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome 4.0.5</a></li>
 			<li>Show fancy tables with <a href="https://datatables.net/">DataTables</a></li> 
 			<li>Have nice galleries with <a href="http://ashleydw.github.io/lightbox/">Bootstrap Lightbox</a></li> 
-			<li><em>Cookie law</em> ready with <a href="http://www.primebox.co.uk/projects/jquery-cookiebar/">Jquery CookieBar</a></li>
+			<li>Be <em>Cookie law</em> ready with <a href="http://www.primebox.co.uk/projects/jquery-cookiebar/">Jquery CookieBar</a></li>
 		</ul>
-		<p>And some 'ad hoc' helpers and functions for page rendering:</p>
+		<p>Moreover there are some 'ad hoc' templates, helpers and functions for page rendering:</p>
 		<ul>
+			<li>Automatic Toc</li>
 			<li>Portfolio</li>
+			<li>.pretty-pre selector</li>
 		</ul>	
 		
 		<p>Other libraries to include: Bootstrap Validator, Equal size, Modal Boxjs. </p>

@@ -8,9 +8,6 @@ body {
 	font-family:"Oxygen";
 }
 
-article {
-	margin-top: 60px;
-}
 
 .portfolio-block {
 	margin-top: 60px;
@@ -112,6 +109,10 @@ div.row > div > div.row, .img-thumb {
 #cookie-bar .cb-policy {background:#0033bb;}
 #cookie-bar .cb-policy:hover {background:#0055dd;}
 
+/*Toc*/
+.toc.affix-top {
+    position: fixed;
+  }
 /*Pace.min.js: loader*
 .pace {
   -webkit-pointer-events: none;

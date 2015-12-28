@@ -2,7 +2,7 @@
 
 <div class="container">
 	<h2>Portfolio</h2>
-	<p>Create a configuration arra like this.</p>
+	<p>Create a configuration array like this:</p>
 	<pre>
 $portfolio = array(
 			'navigation'=>'tabs', //set tabs or pills
