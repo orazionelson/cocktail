@@ -1,20 +1,14 @@
-Get the fuel with [Codeigniter](https://www.codeigniter.com/) MVC framework.
+## Cocktail
+ 
+ Cocktail is a fast front-end builder. It takes the basic code by [Codeigniter-Boilerplate](http://ariok.github.io/codeigniter-boilerplate/) but upgrades Codeigniter to version 3, HTML5Boileplate to the v. 5 and jQuery to v.1.11.2\. Then it adds Bootstrap (v.3) and bundles several scripts to improve your job.
 
-Shake with [HTML5Boilerplate](https://html5boilerplate.com/) best practices.
+*   Extend Bootstrap icons with [Font Awesome 4.0.5](https://fortawesome.github.io/Font-Awesome/)
+*   Show fancy tables with [DataTables](https://datatables.net/)
+*   Have nice galleries with [Bootstrap Lightbox](http://ashleydw.github.io/lightbox/)
+*   Be _Cookie law_ ready with [Jquery CookieBar](http://www.primebox.co.uk/projects/jquery-cookiebar/)
 
-Serve gracefully with [Bootstrap](http://getbootstrap.com/) and more.
+Moreover there are some 'ad hoc' templates, helpers and functions for page rendering:
 
-<span class="lead">Cocktail</span> is a fast front-end builder. It takes the basic code by [Codeigniter-Boilerplate](http://ariok.github.io/codeigniter-boilerplate/) but upgrades Codeigniter to version 3 and HTML5Boileplate to the v. 5\. Then it adds Bootstrap (v.3) and some useful scripts:
-
-*   [jQuery 1.11.2](https://jquery.com/),
-*   [Font Awesome 4.0.5](https://fortawesome.github.io/Font-Awesome/) ,
-*   [DataTables](https://datatables.net/),
-*   [Bootstrap Lightbox](http://ashleydw.github.io/lightbox/),
-
-And some 'ad hoc' helpers and functions for page rendering:
-
+*   Automatic Toc
 *   Portfolio
-
-Other libraries to include: Bootstrap Validator, Equal size, Modal Boxjs.
-
-Ad hoc helpers to write: Page presentation: dynamic menu, tabs, pills, accordion,
+*   .pretty-pre selector
