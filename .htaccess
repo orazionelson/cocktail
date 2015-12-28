@@ -1,6 +1,8 @@
 # Make sure directory listing is disabled
-Options +FollowSymLinks -Indexes
+Options +SymLinksIfOwnerMatch 
+#Options +FollowSymLinks -Indexes
 RewriteEngine on
+#RewriteBase /
 
 # Send request via index.php
 RewriteCond %{REQUEST_FILENAME} !-f
