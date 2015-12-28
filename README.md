@@ -15,6 +15,6 @@ And some 'ad hoc' helpers and functions for page rendering:
 
 *   Portfolio
 
-Other libraries to include: Bootstrap Validator, Gallery, Equal size, Modal Boxjs.
+Other libraries to include: Bootstrap Validator, Equal size, Modal Boxjs.
 
 Ad hoc helpers to write: Page presentation: dynamic menu, tabs, pills, accordion,

@@ -8,10 +8,7 @@ class Homepage extends BP_Controller {
 
     public function index()
     {
-        /*Page dedicated JS - CSS - Google Fonts
-        $this->javascript = array("homepage.js");
-        */
-        $this->css = array("BP/homepage.css");
+        /*Page dedicated JS - CSS - Google Fonts*/
         $this->GFont = array("Lily Script One","Oxygen");
 
         /*Define single page content as usual*/

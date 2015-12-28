@@ -16,6 +16,7 @@ class BP_Controller extends CI_Controller{
     protected $view = false;
     protected $template = "main";
     protected $hasNav = true;
+    protected $cookieLaw = true;
     
     //Page contents
     public $javascript = array();
@@ -49,6 +50,7 @@ class BP_Controller extends CI_Controller{
         $toTpl["title"] = $this->title;
         $toTpl["description"] = $this->description;
         $toTpl["GFont"] = $this->GFont;
+        $toTpl["cookieLaw"] = $this->cookieLaw;
         
         /* Menu: to avoid use boilerplate menu set hasNav to false
          * and remove $menu reference from templates (i.e. from views/template/main.php)*/

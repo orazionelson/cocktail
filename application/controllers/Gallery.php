@@ -22,7 +22,7 @@ class Gallery extends BP_Controller {
         
         $this->gallery=array(
 				'name'=>'pozzuoli',
-				'columns'=>'4'); //set at 2, 3 or 4
+				'columns'=>'3'); //set at 2, 3 or 4
 				
         $toGal["gallery"] = $this->gallery;
 		$toView["gallery"] = $this->load->view("template/gallery",$toGal,true);
