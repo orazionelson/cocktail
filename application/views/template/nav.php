@@ -32,7 +32,7 @@ else {$anchor='homepage';}
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Helpers</li>
                 <li><a href="#">Pretty-pre</a></li>
-                <!--li><a href="#">One more separated link</a></li-->
+                <!--li><a href="#"> One more separated link</a></li-->
               </ul>
             </li>
           </ul>
