@@ -1,7 +1,7 @@
 <div class="clearfix"></div>
 
 <div class="container">
-<div id="bparticle" class="tocfy" data-toc-side="pull-right" data-toc-position="affix-top">	
+<div id="bparticle" class="tocfy" data-toc-side="pull-right" data-toc-position="fixed">	
 	<h2>Automatic Toc</h2>
 	<p>If you have a page like this:</p>
 	<pre class="pretty-pre">
@@ -19,7 +19,7 @@
 <div class="well">
 	<p class="lead">Options:</p>
 	<p>Set <code>data-toc-side="pull-right"</code> to put the menu on the right side of the page.</p>
-	<p>Set <code>data-toc-position="affix-top"</code> to prevent toc scrolling.</p>
+	<p>Set <code>data-toc-position="fixed"</code> to prevent toc scrolling.</p>
 </div>
 	<p>This will create a table of content for the page.</p>
 	<h2>Title (h2) 1</h2>

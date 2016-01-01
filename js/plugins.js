@@ -67,10 +67,12 @@
 	if(!s) s='';
 	
 	var p = $('.tocfy').data('tocPosition');
-	if(!p) p='';
+	var fixed='';
+	if(p=='fixed') fixed=' data-spy = "affix"';
+	
 	//console.log(a);
 	$('.tocfy').wrap( '<div class="row"></div>' )
-	.before('<nav class="toc list-group hidden-print hidden-xs hidden-sm '+p+'" />')
+	.before('<nav class="toc list-group hidden-print hidden-xs hidden-sm"'+fixed+' />')
 	.wrap('<div class="col-md-9" role="main" />');
 	
 	$('.toc').wrap('<div class="col-md-3 '+s+'" role="complementary" />');
