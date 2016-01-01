@@ -23,6 +23,10 @@ body {
 	display:block;
 }
 
+footer{
+	background-color: #D6E8EE;
+}
+
 .tab-pane{
 	padding-top:45px;	
 }
