@@ -18,7 +18,7 @@
           <p>Shake with <a href="https://html5boilerplate.com/">HTML5Boilerplate</a> best practices.</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="images/bootstrap.png" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="images/bootstrap.png" alt="Serve with Bootstrap" width="140" height="140">
           
           <p>Serve gracefully with <a href="http://getbootstrap.com/">Bootstrap</a> and more.</p>
         </div><!-- /.col-lg-4 -->
@@ -40,13 +40,25 @@
 		<ul>
 			<li>Automatic Toc</li>
 			<li>Portfolio</li>
+			<li>5 Footer Templates</li>
 			<li>.pretty-pre selector</li>
 		</ul>	
 		
 		<p>Other libraries to include: Bootstrap Validator, Equal size, Modal Boxjs. </p>
 		<p>Ad hoc helpers to write: Page presentation: dynamic menu, tabs, pills, accordion, </p>
+		<div class="well">
+			<h3>CI Configurations</h3>
+			<p>Codeigniter configuration for Boilerplate starts with:</p>
+			<ul>
+				<li>Autoload: url helper</li>
+				<li>Routes: default_controller = "homepage"</li>
+				<li>Index.php: subclass_prefix = "BP_"</li>
+				<li>Base url: http://localhost/cocktail</li>
+			</ul>
+	
+		</div>
 	</article>
-
+	
 </div>
 <div id="contacts" class="container"><article>
 	<h2>Contacts</h2>
@@ -62,41 +74,4 @@ Praesent convallis magna in nulla varius, nec mollis quam faucibus. Morbi non eu
 </article>
 
 </div> 
-
-<ul>
-
-<ul>
-    <li>Codeigniter-Boilerplate helps you start a new project in a few minutes <br>
-        thanks to a simple template, based on <a href="http://html5boilerplate.com/" target ="_blank">HTML5 Boilerplate</a>, resulting in the <br>
-        best cross-browser experience and fast/easy CSS styling.<br>
-    </li>
-
-   <li>
-   Codeigniter-Boilerplate has a prebuild structure which encapsulates single page <br>
-   views into a container view which shares parts of code like header, footer and script.<br>
-   </li>
-
-   <li>
-    Codeigniter-Boilerplate has the primary aim to help developers build simple <br>
-    pages as fast as possible, but without rigid structures. This means allowing the<br>
-    definition of custom elements for any page without restrictions. <br>
-    Developers here have fast access to title, description, javascripts, css, Google Fonts<br>
-    and (obviously) content for any single page.
-   </li>
-
-</ul>
-
-</ul>
-
-<h3>CI Configurations</h3>
-<p>Codeigniter configuration for Boilerplate starts with:</p>
-<ul>
-    <li>Autoload: url helper</li>
-    <li>Routes: default_controller = "homepage"</li>
-    <li>Index.php: subclass_prefix = "BP_"</li>
-    <li>Base url: http://localhost/cocktail</li>
-</ul>
-<br>
-
-
 <?php echo $other_data?>

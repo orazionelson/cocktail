@@ -50,45 +50,21 @@
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
 
-<div id="container">
-    <header>
-    <?php
-    /* codeigniter-boilerplate: main navigation *******************************/
-    echo $nav
-    ?>
-    </header>
-    <div id="main" role="main">
-    <?php
-    /* codeigniter-boilerplate: content from single views *********************/
-    echo $content
-    ?>
-    </div>
-    <footer>
-		<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<h2>Footer content Nav</h2>
-				<nav>
-					<ul>
-						<li><a href="#">A sample</a></li>
-						<li><a href="#">Footer</a></li>
-						<li><a href="#">Menu</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="col-md-4">
-				<h2>map</h2>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155889.49752834326!2d4.758187360082561!3d52.37452874165635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam%2C+Paesi+Bassi!5e0!3m2!1sit!2sit!4v1451668374122" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
-			<div class="col-md-4">
-				<h2>Info</h2>
-				<p>Vestibulum hendrerit odio at malesuada pretium. Maecenas ut hendrerit diam. Donec ipsum tellus, congue id massa aliquam, fermentum pharetra sapien. In facilisis, purus ut sagittis rhoncus, orci urna posuere sapien, sit amet maximus massa eros ac mauris. Suspendisse vel augue ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse ultrices dignissim turpis quis lacinia.</p>
-			</div>
-		</div>
-		</div>
-    </footer>
-  </div> <!--! end of #container -->
-
+	<div id="container">
+	    <header>
+	    <?php
+	    /* codeigniter-boilerplate: main navigation *******************************/
+	    echo $nav
+	    ?>
+	    </header>
+	    <div id="main" role="main">
+	    <?php
+	    /* codeigniter-boilerplate: content from single views *********************/
+	    echo $content
+	    ?>
+	    </div>
+		<?php echo $footer; ?> 	
+	</div> <!--! end of #container -->
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo base_url()?>js/vendor/jquery-1.11.2.js"><\/script>')</script>

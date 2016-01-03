@@ -4,7 +4,7 @@
 body {
     position: relative;
 	padding-top: 50px;
-	padding-bottom: 20px;
+	padding-bottom: 0;
 	font-family:"Oxygen";
 }
 
@@ -23,10 +23,322 @@ body {
 	display:block;
 }
 
+
+/*Footers settings*/
 footer{
-	background-color: #D6E8EE;
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 80px;
+	margin-bottom: 0;
 }
 
+footer .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+.footer-basic-centered{
+	text-align: center;
+	font: normal 18px sans-serif;
+	padding: 45px;
+}
+
+
+.footer-basic-centered .footer-company-motto{
+	color:  #8d9093;
+	font-size: 24px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links{
+	list-style: none;
+	font-weight: bold;
+	color:  #ffffff;
+	padding: 35px 0 23px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links a{
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer-basic-centered{
+		padding: 35px;
+	}
+
+	.footer-basic-centered .footer-company-motto{
+		font-size: 18px;
+	}
+
+	.footer-basic-centered .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-basic-centered .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer-basic-centered .footer-links a{
+		line-height: 1.8;
+	}
+}
+
+/*footer-distributed*/
+
+.footer-distributed{
+	text-align: left;
+}
+
+.footer-distributed-basic{
+	font: normal 16px sans-serif;
+	padding: 45px 50px;
+}
+
+.footer-distributed-with-search{
+	font: bold 16px sans-serif;
+	padding: 50px 60px;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+.footer-distributed-with-contact-form{
+	font: bold 16px sans-serif;
+	padding: 50px 60px 40px;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+.footer-distributed-with-address-and-phones{
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-company-name{
+	font-weight: normal;
+}
+
+.footer-distributed .footer-company-logo{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0 0 10px;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-company-logo span{
+	color:  #5383d3;
+}
+
+.footer-distributed .footer-left p{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	
+	vertical-align: top;
+}
+
+/*Footer Center*/
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+
+
+/*footer-distributed Footer links */
+
+.footer-distributed p.footer-links{
+	font-size:18px;
+	font-weight: bold;
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-right{
+	margin-top: 6px;
+}
+
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+/* The search form */
+
+.footer-distributed form{
+	position: relative;
+}
+
+.footer-distributed label{
+	color: #ffffff;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+	padding: 18px 50px 18px 18px;
+}
+
+.footer-distributed form input:focus{
+	outline: none;
+}
+
+.footer-distributed form button{
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* Changing the placeholder color */	
+
+.footer-distributed form input::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed form input::-moz-placeholder {
+	opacity: 1;
+	color:  #5c666b;
+}
+
+.footer-distributed form input:-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+/* The magnify glass icon *
+
+.footer-distributed .input-group-addon i{
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 16px;
+	right: 18px;
+
+	color: #d1d2d2;
+	font-size: 18px;
+}
+
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 800px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		text-align: center;
+	}
+
+	.footer-distributed .footer-right{
+		margin: 0 auto 20px;
+	}
+
+	.footer-distributed .footer-left p.footer-links{
+		line-height: 1.8;
+	}
+}
+
+
+/*Corrections*/
 .tab-pane{
 	padding-top:45px;	
 }

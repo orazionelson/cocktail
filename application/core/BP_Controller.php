@@ -16,12 +16,13 @@ class BP_Controller extends CI_Controller{
     protected $view = false;
     protected $template = "main";
     protected $hasNav = true;
+    protected $hasFooter = true;
     protected $cookieLaw = true;
     
     //Page contents
     public $javascript = array();
     public $css = array();
-    public $GFont = array('Oxygen');
+    public $GFont = array('Oxygen','Cookie');
     public $content = false;
     //Page Meta
     public $title = false;
@@ -60,6 +61,14 @@ class BP_Controller extends CI_Controller{
             $toTpl["nav"] = $this->load->view("template/nav",$toMenu,true);
         }
         /*eo menu*/
+        
+        /* Footer: to avoid use a footer hasFooter to false
+         * and remove $footer reference from templates (i.e. from views/template/main.php)*/
+        if($this->hasFooter){
+            $toFooter['footer_id']='';
+            $toTpl["footer"] = $this->load->view("template/footer-cocktail",$toFooter,true);
+        }
+        /*eo footer*/
 
         //Finally render the page :)
         $this->load->view("template/".$this->template,$toTpl);

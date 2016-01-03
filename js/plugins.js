@@ -66,6 +66,13 @@
 		var s = $('.tocfy').data('tocSide');
 	if(!s) s='';
 	
+	if(s=='right'){var pull='pull-right';}
+	else {var pull='';}
+	
+	if(s=='top') {var col1='12'; var col2='12';}
+	else  {var col1='9'; var col2='3';}
+
+	
 	var p = $('.tocfy').data('tocPosition');
 	var fixed='';
 	if(p=='fixed') fixed=' data-spy = "affix"';
@@ -73,9 +80,9 @@
 	//console.log(a);
 	$('.tocfy').wrap( '<div class="row"></div>' )
 	.before('<nav class="toc list-group hidden-print hidden-xs hidden-sm"'+fixed+' />')
-	.wrap('<div class="col-md-9" role="main" />');
+	.wrap('<div class="col-md-'+col1+'" role="main" />');
 	
-	$('.toc').wrap('<div class="col-md-3 '+s+'" role="complementary" />');
+	$('.toc').wrap('<div class="col-md-'+col2+' '+pull+'" role="complementary" />');
 	//$('.tocfy').find(':header' ).clone().appendTo('.toc');
 	var i=1;
 	

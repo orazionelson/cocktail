@@ -2,7 +2,7 @@
 
 <div class="container">
 	<h2>Static Galleries</h2>
-	<p>You can obtain a static gallery just adding the javascript from the controller <code>$this->javascript = array('ekko-lightbox.min.js');</code>, then template your markup in the view as explained at <a href="http://ashleydw.github.io/lightbox/">http://ashleydw.github.io/lightbox/</a>.</p>
+	<p>You can obtain a static gallery just adding the javascript from the controller: <pre><code>$this->javascript = array('ekko-lightbox.min.js');</code></pre> Then template your markup in the view as explained at <a href="http://ashleydw.github.io/lightbox/">http://ashleydw.github.io/lightbox/</a>.</p>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
@@ -30,19 +30,19 @@
 		</div>
 	</div>
 	<h2>Dynamic Galleries</h2>
-	<p>You can also render a gallery by dynamic content.</p>
+	<p>You can also dynamically render a gallery.</p>
 		<ol>
-			<li>Add your folder with pictures to <code>images/</code> folder </li>
-			<li>Set up a configuration array in your controller and pass it to the <code>gallery</code> template.</li>
+			<li>Add your folder with pictures to <code>images/</code>.</li>
+			<li>After the javascript call (see above), set up a configuration array in your controller and pass it to the <code>gallery</code> template.</li>
 		</ol>
-		<pre>
+		<pre><code>
 $this->gallery=array(
 		'name'=>'foldername',
 		'columns'=>'4'); //set at 2, 3 or 4
 		
 $toGal["gallery"] = $this->gallery;
 $toView["gallery"] = $this->load->view("template/gallery",$toGal,true);
-		</pre>
+		</code></pre>
 	<div>
 		<?php
 		echo $gallery;

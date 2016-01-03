@@ -34,7 +34,7 @@
 
 	
 		<h3>Data Table Bundle</h3>
-		<p>You can extend table functionalities with DataTables</p>
+		<p>You can extend table features with <a href="https://datatables.net/">DataTables</a>.</p>
 		<p>Add the js and the css to the controller</p>
 		<pre>
 // Define custom CSS

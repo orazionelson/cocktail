@@ -24,6 +24,7 @@ else {$anchor='homepage';}
 				<li class="dropdown-header">Components</li>  
                 <li class="<?php echo isActive($page_id,"datatables")?>"><a href="<?php echo base_url()?>datatables">DataTables</a></li>
                 <li class="<?php echo isActive($page_id,"gallery")?>"><a href="<?php echo base_url()?>gallery">Gallery</a></li>
+                <li class="<?php echo isActive($page_id,"footers")?>"><a href="<?php echo base_url()?>footers">Footers</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Pages</li> 
 				<li class="<?php echo isActive($page_id,"example")?>"><a href="<?php echo base_url()?>example">Base Example</a></li>                 
@@ -31,7 +32,7 @@ else {$anchor='homepage';}
                 <li class="<?php echo isActive($page_id,"portfolio")?>"><a href="<?php echo base_url()?>portfolio">Portfolio</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Helpers</li>
-                <li><a href="#">Pretty-pre</a></li>
+                <li class="<?php echo isActive($page_id,"prettypre")?>"><a href="<?php echo base_url()?>prettypre">Pretty-pre</a></li>
                 <!--li><a href="#">One more separated link</a></li-->
               </ul>
             </li>

@@ -9,11 +9,11 @@ class Homepage extends BP_Controller {
     public function index()
     {
         /*Page dedicated JS - CSS - Google Fonts*/
-        $this->GFont = array("Lily Script One",'Oxygen');
+        $this->GFont = array("Lily Script One","Oxygen","Cookie");
 
         /*Define single page content as usual*/
         $toView['page_content'] = date("H:i:s");
-        $toView['other_data'] = "<p>See you!</p>";
+        $toView['other_data'] = "";
         
         /*short cut to load->view("pages/page_name",$content,true)*/
         $this->build_content($toView);
