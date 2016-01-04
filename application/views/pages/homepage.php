@@ -45,8 +45,8 @@
 			<li>.pretty-pre selector</li>
 		</ul>	
 		
-		<p>Other libraries to include: Bootstrap Validator, Equal size, Modal Boxjs. </p>
-		<p>Ad hoc helpers to write: Page presentation: pills, accordion, </p>
+		<!--p>Other libraries to include: Bootstrap Validator, Equal size, Modal Boxjs. </p>
+		<p>Ad hoc helpers to write: Page presentation: pills, accordion, </p-->
 		<div class="well">
 			<h3>CI Configurations</h3>
 			<p>Codeigniter configuration for Boilerplate starts with:</p>
