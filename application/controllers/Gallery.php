@@ -10,8 +10,8 @@ class Gallery extends BP_Controller {
         */
 
         // Define Meta
-        $this->title = "Portfolio";
-        $this->description = "portfolio template!";
+        $this->title = "Gallery";
+        $this->description = "Gallery libghtbox bundle.";
 
         // Define custom CSS
         //$this->css = array("dataTables.bootstrap.min.css");
