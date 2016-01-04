@@ -16,8 +16,6 @@ class Gallery extends BP_Controller {
         // Define custom CSS
         //$this->css = array("dataTables.bootstrap.min.css");
 		$this->javascript = array('ekko-lightbox.min.js');
-        // Import Google Font 
-        $this->GFont = array("Oxygen");
         
         
         $this->gallery=array(
