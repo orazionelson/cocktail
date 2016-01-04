@@ -14,7 +14,7 @@ class Portfolio extends BP_Controller {
         $this->description = "portfolio template!";
         
         $portfolio = array(
-			'navigation'=>'tabs', //set tabs or pills
+			'navigation'=>'pills', //set tabs or pills
 			'columns'=>'4', //set 2,3 or 4 columns
 			2013=>array(
 					array( 	'label'=>'project_one',

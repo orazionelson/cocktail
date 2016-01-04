@@ -14,7 +14,7 @@ else {$anchor='homepage';}
 	  <img src="images/bootstrap.png" class="img-circle" alt="logo" height="40" style="margin-top:5px; margin-right:5px;">
 	</div>
 	<div id="navbar" class="navbar-collapse collapse">
-	  <ul class="nav navbar-nav">
+	  <ul class="nav scrollnav navbar-nav">
         <li class="<?php echo isActive($page_id,"homepage")?>"><a href="<?php echo  base_url()?>homepage">Home</a></li>
         <li><a href="<?php echo $anchor; ?>#about">About</a></li>
         <li><a href="<?php echo $anchor; ?>#contacts">Contacts</a></li>
@@ -29,6 +29,7 @@ else {$anchor='homepage';}
                 <li class="dropdown-header">Pages</li> 
 				<li class="<?php echo isActive($page_id,"example")?>"><a href="<?php echo base_url()?>example">Base Example</a></li>                 
                 <li class="<?php echo isActive($page_id,"automatictoc")?>"><a href="<?php echo base_url()?>automatictoc">Automatic Toc</a></li>
+                <li class="<?php echo isActive($page_id,"automatictabs")?>"><a href="<?php echo base_url()?>automatictabs">Automatic Tabs</a></li>
                 <li class="<?php echo isActive($page_id,"portfolio")?>"><a href="<?php echo base_url()?>portfolio">Portfolio</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Helpers</li>

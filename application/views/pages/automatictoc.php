@@ -19,8 +19,9 @@
 <div class="well">
 	<p class="lead">Options:</p>
 	<p>Set <code>data-toc-side="right"</code> to put the toc on the right side of the page.</p>
-	<p>Set <code>data-toc-side="top"</code> to put the toc on the top of the page.</p>
-	<p class="alert-success">The left position is by default, so don't use any attribute to see the toc on the left side of the page.</p>
+	<p>Or set <code>data-toc-side="top"</code> to put the toc on the top of the page.</p>
+	<div class="alert alert-info" role="alert">The left position is by default, so don't use any attribute to see the toc on the left side of the page.</div>
+
 	<p>Set <code>data-toc-position="fixed"</code> to prevent toc scrolling.</p>
 </div>
 	<p>This will create a table of content for the page.</p>

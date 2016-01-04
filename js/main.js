@@ -2,6 +2,7 @@ $(document).ready(function() {
 	$('.pretty-pre').prettyPre();
 	//tocfy
 	$('.tocfy').tocfy();
+	$('.tabfy').tabfy('h2');
 
 	//set the jumbotron to 100% of page
 	var wh = $(window).height();
@@ -83,7 +84,7 @@ $(document).ready(function() {
 	});
 
 //Scroller
-$().scroller("ul.nav li a[href^='#']",50);
+$().scroller(".scrollnav",50);
 
 });
 

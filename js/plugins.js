@@ -63,7 +63,7 @@
  **********************/
 (function ( $ ) {
 	$.fn.tocfy = function (){
-		var s = $('.tocfy').data('tocSide');
+		var s = $(this).data('tocSide');
 	if(!s) s='';
 	
 	if(s=='right'){var pull='pull-right';}
@@ -73,20 +73,20 @@
 	else  {var col1='9'; var col2='3';}
 
 	
-	var p = $('.tocfy').data('tocPosition');
+	var p = $(this).data('tocPosition');
 	var fixed='';
 	if(p=='fixed') fixed=' data-spy = "affix"';
 	
 	//console.log(a);
-	$('.tocfy').wrap( '<div class="row"></div>' )
+	$(this).wrap( '<div class="row"></div>' )
 	.before('<nav class="toc list-group hidden-print hidden-xs hidden-sm"'+fixed+' />')
 	.wrap('<div class="col-md-'+col1+'" role="main" />');
 	
 	$('.toc').wrap('<div class="col-md-'+col2+' '+pull+'" role="complementary" />');
-	//$('.tocfy').find(':header' ).clone().appendTo('.toc');
+	//$(this).find(':header' ).clone().appendTo('.toc');
 	var i=1;
 	
-	$('.tocfy').find(':header' ).each(function() {
+	$(this).find(':header' ).each(function() {
 		var id = $(this).closest( ".tocfy" ).attr('id');
 		$(this).attr('id', id+i++);
 		$(this).addClass('toc-item');
@@ -97,7 +97,7 @@
 	for(var i = all.length; i--; nodes.unshift(all[i]));
 	var result = document.createElement("ul");
 	buildRec(nodes, result, 2);
-	$(result).addClass('nav nav-stacked');
+	$(result).addClass('nav scrollnav nav-stacked');
 	$(".toc").append(result);
 	};
 	
@@ -154,7 +154,8 @@
  ********************/
 (function ( $ ) {
 	$.fn.scroller = function (selector,correction){
-		var selector="ul.nav li a[href^='#']";
+		//console.log(selector);
+		var selector="ul"+selector+" li a[href^='#']";
 		var correction=50;
 
 		$(selector).on('click', function(e) {
@@ -182,4 +183,48 @@
 		});
 
 	};
+}( jQuery ));
+
+/***********************
+ * Tabfy plugin
+ * by Alfredo Cosco 2015
+ * @orazio_nelson
+ * alfredo.cosco@gmail.com
+ **********************/
+(function ( $ ) {
+	$.fn.tabfy = function (selector){
+		var nav = $(this).data('tabNav');
+		if(!nav) nav='tab';
+
+		var fade = $(this).data('tabFade');
+		
+		var fading='';
+		if(fade==true) {fading='fade';}
+
+		var labels = [];
+		var contents = [];
+		var i=0;
+
+		$(this).wrapInner('<div class="original-text" />')
+		.prepend('<ul class="nav nav-'+nav+'s" role="tablist" />')
+		.find('ul.nav').after('<div class="tab-content" />');
+
+		$(this).find(selector).each(function() {
+			var label = '<li role="presentation"><a href="#'+$(this).text()+'" aria-controls="'+$(this).text()+'" role="tab" data-toggle="'+nav+'">'+$(this).text()+'</a></li>';		
+			var content= '<div role="tabpanel" class="tab-pane '+fading+'" id="'+$(this).text()+'">'+$(this).next().html()+'</div>';	
+			labels.push(label);
+			contents.push(content);
+			i++
+		});
+		
+		var tabs = labels.join('');
+		var tcont = contents.join('');
+
+		$(this).find('ul.nav').append(tabs);
+		$(this).find('.tab-content').append(tcont);	
+		
+		$(this).find('ul.nav a:first').tab('show');
+
+		$(this).find( ".original-text" ).remove();
+	}	
 }( jQuery ));

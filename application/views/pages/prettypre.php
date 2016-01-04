@@ -2,7 +2,7 @@
 
 <div class="container">
 	<h2>Pretty-pre</h2>
-	<p>The <code>pre</code> element doesn't parse the mark-up. Just use the <code>.pretty-pre</code> class in the element to see the unprocessed tags.</p>
+	<p>The <code>pre</code> element doesn't parse the mark-up. Just use the <code>.pretty-pre</code> class in the element to see the tags.</p>
 	<pre class="pretty-pre">
 	<div>
 		<h2>Title (h2) 1</h2>

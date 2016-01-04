@@ -88,7 +88,14 @@ Class BP_Portfolio {
 		
 	function openNav(){
 		$this->groups=array_keys($this->portfolio);
-		$pnav= '<div><ul class="nav nav-'.$this->navigation.'" style="margin-top:15px">';
+		if($this->navigation=='pills'){
+			$navclass=$this->navigation." scrollnav";
+			}
+		if($this->navigation=='tabs'){
+			$navclass=$this->navigation;
+			}
+			
+		$pnav= '<div><ul class="nav nav-'.$navclass.'" style="margin-top:15px">';
 		foreach($this->groups as $k=>$this->group){
 			if($k==0){$this->itemclass=" class=\"active\"";}
 			else $this->itemclass='';

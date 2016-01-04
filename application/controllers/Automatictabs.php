@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Automatictoc extends BP_Controller {
+class Automatictabs extends BP_Controller {
 
     public function index()
     {
@@ -9,11 +9,11 @@ class Automatictoc extends BP_Controller {
         */
 
         // Define Meta
-        $this->title = "Automatic Toc!";
-        $this->description = "Get TOC by the page structure";
+        $this->title = "Automatic Tabs!";
+        $this->description = "Get TABS by the page structure";
 
         //Somedata for the page.
-        $toView["day"] = strftime("%A",strtotime("today"));
+        $toView = '';
 
         /*short cut to load->view("pages/page_name",$content,true)*/
         $this->build_content($toView);
