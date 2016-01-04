@@ -34,6 +34,7 @@ else {$anchor='homepage';}
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Helpers</li>
                 <li class="<?php echo isActive($page_id,"prettypre")?>"><a href="<?php echo base_url()?>prettypre">Pretty-pre</a></li>
+                <li class="<?php echo isActive($page_id,"fullpage")?>"><a href="<?php echo base_url()?>fullpage">Fullpage</a></li>
                 <!--li><a href="#">One more separated link</a></li-->
               </ul>
             </li>

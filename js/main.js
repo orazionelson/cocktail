@@ -4,10 +4,15 @@ $(document).ready(function() {
 	$('.tocfy').tocfy();
 	$('.tabfy').tabfy('h2');
 
-	//set the jumbotron to 100% of page
-	var wh = $(window).height();
-	var nh = $('.navbar:first').height();
-	$('.jumbotron').css('min-height',(wh-nh));
+	//set an element min-height at 100% of page	
+	var delta = $('.navbar:first').height();
+	$().fullpage(delta);
+	
+	
+
+	//var wh = $(window).height();
+	//var nh = $('.navbar:first').height();
+	//$('.jumbotron').css('min-height',(wh-nh));
 
 	//class to bundle DataTable
 	if($('table.bp-data-table')[0]){
@@ -84,7 +89,7 @@ $(document).ready(function() {
 	});
 
 //Scroller
-$().scroller(".scrollnav",50);
+$().scroller(".scrollnav",delta);
 
 });
 

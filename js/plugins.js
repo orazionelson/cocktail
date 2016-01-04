@@ -24,7 +24,7 @@
 // Place any jQuery/helper plugins in here.
 /*****
  * Make a pretty 'pre' for your code
- * by Alfredo Cosco 2015
+ * by Alfredo Cosco 2016
  * @orazio_nelson
  * alfredo.cosco@gmail.com
  * source of inspiration 
@@ -57,7 +57,7 @@
 
 /***********************
  * Tocfy plugin
- * by Alfredo Cosco 2015
+ * by Alfredo Cosco 2016
  * @orazio_nelson
  * alfredo.cosco@gmail.com
  **********************/
@@ -148,7 +148,7 @@
 
 /*********************
  * Scroller
- * by Alfredo Cosco 2015
+ * by Alfredo Cosco 2016
  * @orazio_nelson
  * alfredo.cosco@gmail.com
  ********************/
@@ -187,7 +187,7 @@
 
 /***********************
  * Tabfy plugin
- * by Alfredo Cosco 2015
+ * by Alfredo Cosco 2016
  * @orazio_nelson
  * alfredo.cosco@gmail.com
  **********************/
@@ -228,3 +228,19 @@
 		$(this).find( ".original-text" ).remove();
 	}	
 }( jQuery ));
+
+/***********************
+ * Fullpage plugin
+ * set element min-height to 100% of page
+ * by Alfredo Cosco 2016
+ * @orazio_nelson
+ * alfredo.cosco@gmail.com
+ **********************/
+(function ( $ ) {
+	$.fn.fullpage = function (delta){
+		if(!delta) delta=0;
+		var wh = $(window).height();
+		$('.fullpage').css('min-height',(wh-delta));
+	}	
+}( jQuery ));
+		

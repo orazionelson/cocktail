@@ -1,5 +1,5 @@
 <div class="clearfix"></div>
-<div id="home" class="jumbotron">
+<div id="home" class="jumbotron fullpage">
 	<div class="container text-center jumboheader">
 	<h1>Cocktail</h1>
 	<h2>Codeigniter + HTML5Boilerplate + Bootstrap</h2>
@@ -43,6 +43,7 @@
 			<li>Five Footer Templates</li>
 			<li>Portfolio</li>			
 			<li>.pretty-pre selector</li>
+			<li>.fullpage selector</li>
 		</ul>	
 		
 		<!--p>Other libraries to include: Bootstrap Validator, Equal size, Modal Boxjs. </p>
