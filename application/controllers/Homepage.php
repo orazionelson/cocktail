@@ -8,6 +8,7 @@ class Homepage extends BP_Controller {
 
     public function index()
     {
+		$this->title = "Cocktail Home Page";
         /*Page dedicated JS - CSS - Google Fonts*/
         $this->GFont = array("Lily Script One","Oxygen","Cookie");
 

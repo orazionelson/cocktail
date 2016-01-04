@@ -10,5 +10,7 @@
 Moreover there are some 'ad hoc' templates, helpers and functions for page rendering:
 
 *   Automatic Toc
+*	Automatic Tabs
+*	Five Footer Templates
 *   Portfolio
 *   .pretty-pre selector
