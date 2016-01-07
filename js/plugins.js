@@ -39,6 +39,7 @@
 			{	
 			var content = $(preEl[i]).html()
 					.replace(/[<>]/g, function(m) { return {'<':'&lt;','>':'&gt;'}[m]})
+					.replace(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi,'<a href="$1">$1</a>')
 					;						
 			var tabs_to_remove = '';
 			//console.log(content.indexOf('\t'));
@@ -153,10 +154,11 @@
  * alfredo.cosco@gmail.com
  ********************/
 (function ( $ ) {
-	$.fn.scroller = function (selector,correction){
+	$.fn.scroller = function (selector,delta){
 		//console.log(selector);
 		var selector="ul"+selector+" li a[href^='#']";
-		var correction=50;
+		
+		if(!delta) {var delta=50;}
 
 		$(selector).on('click', function(e) {
 	
@@ -173,7 +175,7 @@
 	   
 	   // animate
 	   $('html, body').animate({
-	       scrollTop: target-correction
+	       scrollTop: target-delta
 	     }, 1000, function(){
 	       // when done, add hash to url
 	       // (default click behaviour)

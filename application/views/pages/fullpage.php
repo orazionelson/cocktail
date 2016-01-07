@@ -2,7 +2,7 @@
 
 <div class="container">
 	<h2>Full page</h2>
-	<p>The <code>.fullpage</code> selector set an element <code>min-height</code> at 100% of the page.</p>
+	<p>The <code>.fullpage</code> selector sets an element <code>min-height</code> at 100% of the page.</p>
 	<p>To use the selector just add it to the class attribute of the element to resize.</p>
 		<pre class="pretty-pre">
 			<div id="home" class="jumbotron fullpage">

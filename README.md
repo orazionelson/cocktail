@@ -14,3 +14,4 @@ Moreover there are some 'ad hoc' templates, helpers and functions for page rende
 *	Five Footer Templates
 *   Portfolio
 *   .pretty-pre selector
+*   .fullpage selector
