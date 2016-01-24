@@ -2,6 +2,7 @@
  
  Cocktail is a fast front-end builder. It takes the basic code by [Codeigniter-Boilerplate](http://ariok.github.io/codeigniter-boilerplate/) but upgrades Codeigniter to version 3, HTML5Boileplate to the v. 5 and jQuery to v.1.11.2\. Then it adds Bootstrap (v.3) and bundles several scripts to improve your job.
 
+*	A minification library to improve your performances in production environment
 *   Extend Bootstrap icons with [Font Awesome 4.0.5](https://fortawesome.github.io/Font-Awesome/)
 *   Show fancy tables with [DataTables](https://datatables.net/)
 *   Have nice galleries with [Bootstrap Lightbox](http://ashleydw.github.io/lightbox/)
