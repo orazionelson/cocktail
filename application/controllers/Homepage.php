@@ -8,7 +8,9 @@ class Homepage extends BP_Controller {
 
     public function index()
     {
+		
 		$this->title = "Cocktail Home Page";
+		$this->description = "Coctail is a fast front end solution made mixing CodeIgniter, HTML5Boilerplate and Bootstrap.";
         /*Page dedicated JS - CSS - Google Fonts*/
         $this->GFont = array("Lily Script One","Oxygen","Cookie");
 

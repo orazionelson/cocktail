@@ -1,0 +1,46 @@
+{
+    "navigation": "tabs",
+    "columns": "3",
+    "Projects": [
+        {
+            "label": "land1",
+            "name": "So long",
+            "description": "Lorem ipsum dolor sit amet...",
+            "url": "http://www.example.com/"
+        },
+        {
+            "label": "land2",
+            "name": "And thanks for",
+            "description": "Lorem ipsum dolor sit amet...",
+            "url": "http://www.example.com/"
+        },
+        {
+            "label": "land4",
+            "name": "All the fish",
+            "description": "Lorem ipsum dolor sit amet...",
+            "url": "http://www.example.com/"
+        }
+    ],
+	"Hobbies": [
+        {
+            "label": "land3",
+            "name": "Hobby one",
+            "description": "Lorem ipsum dolor sit amet...",
+            "url": "http://www.example.com/"
+        },
+        {
+            "label": "land2",
+            "name": "Ken hobby",
+            "description": "Lorem ipsum dolor sit amet...",
+            "url": "http://www.example.com/"
+        }
+    ],
+    "Fun": [
+        {
+            "label": "fun",
+            "name": "Music",
+            "description": "Lorem ipsum dolor sit amet...",
+            "url": "http://www.example.com/"
+        }
+    ]
+}

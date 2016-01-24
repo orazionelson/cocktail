@@ -17,7 +17,7 @@ else {$anchor='homepage';}
 	  <ul class="nav scrollnav navbar-nav">
         <li class="<?php echo isActive($page_id,"homepage")?>"><a href="<?php echo  base_url()?>homepage">Home</a></li>
         <li><a href="<?php echo $anchor; ?>#about">About</a></li>
-        <li><a href="<?php echo $anchor; ?>#contacts">Contacts</a></li>
+        <li><a href="<?php echo $anchor; ?>#config">Config</a></li>
         <li class="dropdown">
               <a href="<?php echo base_url()?>examples" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples<span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -36,9 +36,8 @@ else {$anchor='homepage';}
                 <li class="<?php echo isActive($page_id,"prettypre")?>"><a href="<?php echo base_url()?>prettypre">Pretty-pre</a></li>
                 <li class="<?php echo isActive($page_id,"fullpage")?>"><a href="<?php echo base_url()?>fullpage">Fullpage</a></li>
                 <!--li><a href="#">One more separated link</a></li-->
-              </ul>
-            </li>
-          </ul>
+			</ul>
+		</li>
    	  </ul>
 	</div><!--/.navbar-collapse -->
   </div>

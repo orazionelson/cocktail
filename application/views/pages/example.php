@@ -11,7 +11,8 @@ class Example extends BP_Controller {
 
         $this->title = "Example!";
         $this->description = "A Codeigniter-Boilerplate example";
-        $this->css = array("BP/homepage.css","BP/example.css");
+        $this->css[] = "BP/homepage.css";
+        $this->css[] = "BP/example.css";
         $this->GFont = array("Lobster","Puritan");
         $toView["day"] = strftime("%A",strtotime("today"));
 

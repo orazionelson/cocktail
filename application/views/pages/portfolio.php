@@ -3,10 +3,11 @@
 <div class="container">
 	<h2>Portfolio</h2>
 	<p>In the page controller create a configuration array like this:</p>
-	<pre>
+	<pre><code>
 $portfolio = array(
 			'navigation'=>'tabs', //set tabs or pills
 			'columns'=>'4', //set 2,3 or 4 columns
+			'imgfolder'=>'path/to/my/folder/'; //this is optional if you don't set it the default folder is 'images/portfolio/'
 			2013=>array(
 					array( 	'label'=>'project_one',
 						'name'=>'Project One',
@@ -25,17 +26,34 @@ $portfolio = array(
 				array('label'=>'project_seven','name'=>'Project 7','description'=>"Lorem ipsum dolor sit amet..."),
 			)
 		);
-	</pre>
+	</code></pre>
 	<p>Call the <code>BP_Portfolio</code> class to build the portfolio.</p>
-	<pre>
+	<pre><code>
         //Create portfolio.
         $myportfolio=new BP_Portfolio;
         $myportfolio->portfolio=$portfolio;
         
         //Pass to the page the parsed portfolio
         $toView["portfolio"] = $myportfolio->createPortfolio();	
-	</pre>
+	</code></pre>
 <?php
 echo $portfolio;
 ?>
 </div>	
+<div class="container">
+	<h2>Use a <code>json</code> file as source</h2>
+	<p>You can also build the portfolio starting by a json file, as example you can find the projects.json file in the <code>data/</code> folder.</p>
+	<pre><code>
+	$json_file = file_get_contents('data/projects.json');
+	// convert the string to a json object
+	$projects = json_decode($json_file, TRUE);
+	//Create portfolio.
+	$myprojects=new BP_Portfolio;
+	$myportfolio->portfolio=$projects;
+	//Push to view	
+	$toView["projects"] = $myportfolio->createPortfolio();	
+	</code></pre>
+<?php
+echo $projects;
+?>
+</div>

@@ -5,6 +5,7 @@ Class BP_Portfolio {
 	var $cols;
 	var $navigation;
 	var $chunks;
+	var $imgfolder;
 	var $bootstrap_cols;
 	
 	
@@ -18,6 +19,11 @@ Class BP_Portfolio {
 		unset($this->portfolio['columns']);
 		$this->navigation=$this->portfolio['navigation'];
 		unset($this->portfolio['navigation']);
+		$this->imgfolder=$this->getImgFolder();
+		
+		if(isset($this->portfolio['imgfolder'])){	
+			unset($this->portfolio['imgfolder']);
+		}
 
 		$this->groups=array_keys($this->portfolio);
 		$data=$this->portfolio;
@@ -64,22 +70,47 @@ Class BP_Portfolio {
 			}
 
 		}
-		
+	
+	function getImgFolder(){
+		$data=$this->portfolio;
+		if(isset($data['imgfolder'])){$imgfolder=$data['imgfolder'];}
+		else {$imgfolder='images/portfolio/';}
+		return $imgfolder;
+	}
+			
 	function portfolioContents($projects){
 		$chunk_proj = array_chunk($projects, $this->chunks, true);
 		$contents='';
 		foreach($chunk_proj as $kp=>$vp){
 			$contents.= "<div class=\"row\">";
 				foreach($vp as $x=>$y){
-					$contents.= '<div class="col-md-'.$this->bootstrap_cols.' portfolio-item">
-					<a href="#">
-					<img class="img-responsive" src="http://placehold.it/700x400" alt="">
-					</a>
-					<h3>
-						<a href="#">'.$y['name'].'</a>
-					</h3>
-					<p>'.$y['description'].'</p>
-				</div>';
+					$basename=$this->imgfolder.$y['label'];
+					if(is_file($basename.".jpg"))
+					{$src=$basename.".jpg";}
+					elseif(is_file($basename.".png"))
+					{$src=$basename.".png";}
+					else {$src="http://placehold.it/700x400";}
+					
+					if(isset($y['url']))
+					{
+						$url='<a href="'.$y['url'].'" target="_blank">';
+						$endurl='</a>';
+						}
+					else {$url=$endurl='';}
+					
+					$contents.= '<div class="col-md-'.$this->bootstrap_cols.' portfolio-item">'
+					.$url
+					.'<img class="img-rounded" style="width:100%" src="'.$src.'" alt="">'
+					.$endurl
+					.'<h3>'
+					.$url
+					.$y['name']
+					.$endurl
+					.'</h3>'
+					.'<div>'
+					.$y['description']
+					.'</div>'
+				.'</div>';
 				}
 			$contents.= "</div>";
 		}

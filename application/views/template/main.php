@@ -4,104 +4,55 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 	<head>
-	  <meta charset="utf-8">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	
-	  <?php /* codeigniter-boilerplate: Page Title *******************************/ ?>
-	  <?php if($title):?>
-	  <?php /* Page title: used if the page object has a title */?>
-	  <title><?php echo $title?></title>
-	  <?else:?>
-	  <?php /* Generic site title: used if the page object has not a title */?>
-	  <title>__YOUR SITE TITLE HERE__</title>
-	  <?php endif;?>
-	
-	  <?php /* codeigniter-boilerplate: Page Description**************************/ ?>
-	  <?php if($description):?>
-	  <?php /* Page description: used if the page object has a description */?>
-	  <meta name="description" content="<?php echo $description?>">
-	  <?else:?>
-	  <?php /* Generic site description: used if the page object has not a description */?>
-	  <meta name="description" content="__SITE DESCRIPTION HERE__">
-	  <?php endif;?>
-	
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel="icon" href="favicon.ico">
-	  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-	  <link rel="stylesheet" href="<?php echo base_url()?>css/bootstrap.min.css">
-	  <link rel="stylesheet" href="<?php echo base_url()?>css/bootstrap-theme.css">
-	  <?php /* codeigniter-boilerplate: Styles **********************************/ ?>
-	  <!--link rel="stylesheet" href="<?php echo base_url()?>css/normalize.css">
-	  <link rel="stylesheet" href="<?php echo base_url()?>css/style.css"-->
-	  <?php foreach($css as $c):?>
-	  <link rel="stylesheet" href="<?php echo base_url()?>css/<?php echo $c?>">
-	  <?php endforeach;?>
-	  <link rel="stylesheet" href="<?php echo base_url()?>css/main.css">
-	  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-	
-	  <?php /* codeigniter-boilerplate: Google Fonts ****************************/ ?>
-	  <?php foreach($GFont as $f):?>
-	  <link  href="http://fonts.googleapis.com/css?family=<?php echo $f?>" rel="stylesheet" type="text/css" >
-	  <?php endforeach;?>
-	  <link rel="stylesheet" href="css/font-awesome.min.css">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<?php /* codeigniter-boilerplate: Page Title *******************************/ ?>
+<?php if($title):?>
+<?php /* Page title: used if the page object has a title */?>
+		<title><?php echo $title?></title>
+<?php else:?>
+<?php /* Generic site title: used if the page object has not a title */?>
+		<title>__YOUR SITE TITLE HERE__</title>
+<?php endif;?>		
+<?php /* codeigniter-boilerplate: Page Description**************************/ ?>
+<?php if($description):?>
+<?php /* Page description: used if the page object has a description */?>
+		<meta name="description" content="<?php echo $description?>">
+<?php else:?>
+<?php /* Generic site description: used if the page object has not a description */?>
+		<meta name="description" content="__SITE DESCRIPTION HERE__">
+<?php endif;?>		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<?php echo $css; //Here all the css ?>
+		<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+		
+		  <?php /* codeigniter-boilerplate: Google Fonts ****************************/ ?>
+		  <?php foreach($GFont as $f):?>
+		<link  href="http://fonts.googleapis.com/css?family=<?php echo rawurlencode($f)?>" rel="stylesheet" type="text/css" >
+		  <?php endforeach;?>
+		  
 	</head>
 	<body data-spy="scroll" data-target=".navbar" data-offset="50">
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
-
 		<div id="container">
-		    <header>
+			<header>
 		    <?php
 		    /* codeigniter-boilerplate: main navigation *******************************/
 		    echo $nav
 		    ?>
-		    </header>
-		    <div id="main" role="main">
+			</header>
+			<div id="main" role="main">
 		    <?php
 		    /* codeigniter-boilerplate: content from single views *********************/
 		    echo $content
 		    ?>
-		    </div>
-			<?php echo $footer; ?> 	
+			</div>
+<?php echo $footer; ?> 	
 		</div> <!--! end of #container -->
-
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="<?php echo base_url()?>js/vendor/jquery-1.11.2.js"><\/script>')</script>
-		<script src="<?php echo base_url()?>js/vendor/bootstrap.min.js"></script>
-		
-		<?php /* cocktail: Scripts *********************************/?>
-		<?php foreach($javascript as $js):?>
-		<script src="<?php echo base_url()?>js/vendor/<?php echo $js?>"></script>
-		<?php endforeach;?>
-		<?php if($cookieLaw): ?>
-			<script src="<?php echo base_url()?>js/vendor/jquery.cookiebar.js"></script>
-			<script>
-			$(document).ready(function(){
-				$.cookieBar();
-			});
-			</script>
-		<?php endif; ?>		
-  
-		<!-- scripts concatenated and minified via ant build script-->
-		<script src="<?php echo base_url()?>js/plugins.js"></script>
-		<script src="<?php echo base_url()?>js/main.js"></script>
-		<!-- end scripts-->
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-		<?php if($cookieLaw): ?>
-		<script>	
-			if(jQuery.cookieBar('cookies')){
-				(function(b,o,i,l,e,r){
-					b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});
-					b[l].l=+new Date;
-					e=o.createElement(i);
-					r=o.getElementsByTagName(i)[0];
-					e.src='//www.google-analytics.com/analytics.js';
-					r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-					ga('create','UA-XXXXX-X','auto');
-					ga('send','pageview');
-				}
-		</script>
-		<?php endif;?>
-    </body>
+<?php echo $javascript; //here the js?>
+	</body>
 </html>

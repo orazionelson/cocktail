@@ -4,7 +4,7 @@
 	<h1>Cocktail</h1>
 	<h2>Codeigniter + HTML5Boilerplate + Bootstrap</h2>
 	</div>
-	<!-- Three columns of text below the carousel -->
+	<!-- Three columns of text  -->
 	<div class="container text-center">
       <div class="row">
         <div class="col-lg-4">
@@ -31,6 +31,7 @@
 		<h2>About</h2>
 		<p><span class="lead">Cocktail</span> is a fast front-end builder. It takes the basic code by <a href="http://ariok.github.io/codeigniter-boilerplate/">Codeigniter-Boilerplate</a> but upgrades Codeigniter to version 3, HTML5Boileplate to the v. 5 and jQuery to v.1.11.2. Then it adds Bootstrap (v.3) and bundles several scripts to improve your job.</p>
 		<ul>
+			<li>A minification library to improve your performances in production environment</li>
 			<li>Extend Bootstrap icons with <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome 4.0.5</a></li>
 			<li>Show fancy tables with <a href="https://datatables.net/">DataTables</a></li> 
 			<li>Have nice galleries with <a href="http://ashleydw.github.io/lightbox/">Bootstrap Lightbox</a></li> 
@@ -44,36 +45,98 @@
 			<li>Portfolio</li>			
 			<li>.pretty-pre selector</li>
 			<li>.fullpage selector</li>
-		</ul>	
-		
-		<!--p>Other libraries to include: Bootstrap Validator, Equal size, Modal Boxjs. </p>
-		<p>Ad hoc helpers to write: Page presentation: pills, accordion, </p-->
+		</ul>
+	</article>
+</div>	
+<div id="config" class="container">
+	<article>
+		<h2>Configurations</h2>		
 		<div class="well">
 			<h3>CI Configurations</h3>
 			<p>Codeigniter configuration for Boilerplate starts with:</p>
 			<ul>
 				<li>Autoload: url helper</li>
+				<li>Autoload: 'BP_Portfolio' and 'Minifier' libraries</li>
 				<li>Routes: default_controller = "homepage"</li>
 				<li>Index.php: subclass_prefix = "BP_"</li>
 				<li>Base url: http://localhost/cocktail</li>
-			</ul>
-	
+			</ul>	
 		</div>
+		<div class="well">
+			<h3>Cocktail Configurations</h3>			
+			<p>Set up main configs for your application in: <code>application/core/BP_controller.php</code></p>
+			<pre><code>
+//Set 0 for development or 1 for production
+//the production environment combine and 
+//minify the css and js				
+protected $status=1; //0=devel, 1=production
+
+//Set your template 
+protected $template = "main";
+
+//Set true if you want a navbar
+protected $hasNav = true;
+
+//Set true if you want a footer
+protected $hasFooter = true;
+
+//Set true to activate cookieLaw plugin
+// and cookie.js file
+protected $cookieLaw = true;
+
+//Page contents
+//The base third-party javascript files common to all the site
+public $javascript = array('vendor/jquery-1.11.2.js','vendor/bootstrap.min.js');
+//The base internal javascript files common to all the site
+public $appjs = array('plugins.js','main.js');
+
+//The base third-party css files common to all the site
+public $css = array('bootstrap.min.css', 'bootstrap-theme.css','font-awesome.min.css');
+//The base internal css files common to all the site
+public $appcss=array('main.css');
+
+//GFonts common to all the site
+public $GFont = array('Oxygen','Cookie');
+			</code></pre>
+		</div>
+		<div class="well">
+			<h3>Controller Configurations</h3>
+			<p>Set specific config of any page in its controller, example: <code>application/controllers/Homepage.php</code></p>
+<pre><code>
+// Define Meta
+// Define section title
+$this->title = "Example!";
+// Define section description
+$this->description = "A Codeigniter-Boilerplate example";
+
+// Define custom CSS
+$this->css[] = "bp_homepage.css";
+$this->css[] = "bp_example.css";
+
+// Define custom JS
+$this->javascript[] = 'vendor/jquery.dataTables.min.js';
+$this->javascript[] = 'vendor/dataTables.bootstrap.min.js';
+
+// Import Google Font Lobster and Puritan
+$this->GFont = array("Lobster","Puritan");
+
+</code></pre>	
+		</div>
+<div class="well">
+<h3><strong>Be careful, this is important for: css, js and GoogleFont management.</strong></h3>
+<ul>
+<li>This APPENDS data to <code>BP_Controller</code> array:
+<pre>
+$this->javascript[] = 'vendor/jquery.dataTables.min.js';
+</pre>
+</li>
+<li>This OVERWRITES the data of<code>BP_Controller</code> array:
+<pre>
+$this->GFont = array("Lobster","Puritan");
+</pre></li>
+</ul>
+</div>			
 	</article>
 	
 </div>
-<div id="contacts" class="container"><article>
-	<h2>Contacts</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel elit eu ante luctus convallis a vitae nibh. Sed blandit neque odio. Praesent vel fringilla eros, sed maximus elit. Etiam ut lectus porttitor, eleifend massa ac, pellentesque augue. Sed elit ligula, dictum eget elit quis, pharetra pharetra arcu. Nulla facilisi. Aenean malesuada convallis turpis, id condimentum massa sagittis at. Integer aliquet leo tortor, vel feugiat elit accumsan ut. Vivamus eu velit lorem. Ut mi justo, tristique et dignissim sit amet, gravida id arcu. Nulla eu neque et ipsum mollis facilisis non nec lorem.
-
-Quisque condimentum, turpis ut porta fringilla, odio lectus ullamcorper metus, vitae commodo odio mauris ut odio. Nulla facilisi. Vestibulum mattis lorem vel leo cursus, in feugiat lectus sagittis. Integer suscipit blandit nisi non hendrerit. Duis ornare, justo at malesuada blandit, enim nisi ultricies eros, quis iaculis lacus libero euismod lorem. Proin vitae eleifend dui. Proin arcu velit, venenatis sit amet risus a, rhoncus tristique risus. Curabitur bibendum in leo in ultricies.
-
-Vestibulum non sagittis neque. Curabitur faucibus quis lacus quis suscipit. In rutrum elit odio, eu placerat nibh tempus vitae. Nullam at facilisis ex, ac viverra ex. Fusce quis lacinia ipsum. Pellentesque a imperdiet est. Donec ut enim ac magna facilisis vulputate nec in nulla. Aenean commodo metus ex, et scelerisque tellus ornare sit amet. Maecenas suscipit purus ac diam elementum pharetra. Cras ac sodales purus. Proin velit velit, molestie vel venenatis nec, suscipit et turpis. Vestibulum et nisi vitae ipsum tristique imperdiet sed sed orci. Mauris ullamcorper purus suscipit, semper turpis in, iaculis est. Sed placerat, tortor ac dapibus consequat, purus metus blandit mauris, imperdiet congue ipsum magna ut nisi.
-
-Sed in ex nec urna luctus auctor quis at justo. Aenean ipsum diam, eleifend in lacus sed, ultricies tempor urna. Donec commodo mi dolor. Vivamus molestie tellus ac elit porttitor, at vestibulum ex porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet massa ac odio vulputate pretium. Phasellus eros lacus, pulvinar a nisl at, condimentum auctor erat. Aliquam tristique sodales tortor, at ultrices justo fringilla quis.
-
-Praesent convallis magna in nulla varius, nec mollis quam faucibus. Morbi non euismod lorem. Sed non mi dapibus lorem mattis rhoncus. Etiam mattis neque non eros dignissim, quis consequat mauris commodo. Aenean nec justo quis libero luctus rutrum quis ac mi. Vestibulum condimentum sollicitudin ipsum faucibus finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In fringilla mi sit amet eleifend viverra. Fusce vel velit dignissim, vulputate quam sed, tempus felis. Maecenas tempus diam erat, tincidunt hendrerit nisl tristique sed. Fusce non quam augue. Duis sed fermentum purus. Nam pretium risus non erat tempus sodales.</p>
-</article>
-
-</div> 
 <?php echo $other_data?>

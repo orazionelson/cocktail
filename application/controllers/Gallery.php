@@ -11,13 +11,11 @@ class Gallery extends BP_Controller {
 
         // Define Meta
         $this->title = "Gallery";
-        $this->description = "Gallery libghtbox bundle.";
+        $this->description = "Bootstrap libghtbox bundle.";
 
-        // Define custom CSS
-        //$this->css = array("dataTables.bootstrap.min.css");
-		$this->javascript = array('ekko-lightbox.min.js');
-        
-        
+        // Define custom JS
+		$this->javascript[] = 'vendor/ekko-lightbox.min.js';
+       
         $this->gallery=array(
 				'name'=>'pozzuoli',
 				'columns'=>'3'); //set at 2, 3 or 4

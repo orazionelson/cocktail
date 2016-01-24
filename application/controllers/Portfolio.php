@@ -19,7 +19,8 @@ class Portfolio extends BP_Controller {
 			2013=>array(
 					array( 	'label'=>'project_one',
 							'name'=>'Project One',
-							'description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."),
+							'description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.",
+							'url' => "http://www.example.com"),
 				array('label'=>'project_two','name'=>'Project two','description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."),
 				array('label'=>'project_three','name'=>'Project 3','description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."),
 				array('label'=>'project_onebis','name'=>'Project OneBIS','description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."),
@@ -42,7 +43,16 @@ class Portfolio extends BP_Controller {
         
         //Pass to the page the parsed portfolio
         $toView["portfolio"] = $myportfolio->createPortfolio();
-
+		
+		$json_file = file_get_contents('data/projects.json');
+		// convert the string to a json object
+		$projects = json_decode($json_file, TRUE);
+		//Create portfolio.
+        //$myprojects=new BP_Portfolio;
+        $myportfolio->portfolio=$projects;
+		
+		$toView["projects"] = $myportfolio->createPortfolio();	
+		
         /*short cut to load->view("pages/page_name",$content,true)*/
         $this->build_content($toView);
 

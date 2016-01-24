@@ -13,7 +13,8 @@ class Example extends BP_Controller {
         $this->description = "A Codeigniter-Boilerplate example";
 
         // Define custom CSS
-        $this->css = array("BP/homepage.css","BP/example.css");
+        $this->css[] = "bp_homepage.css";
+        $this->css[] = "bp_example.css";
 
         // Import Google Font Lobster and Puritan
         $this->GFont = array("Lobster","Puritan");
