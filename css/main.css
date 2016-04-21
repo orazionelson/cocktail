@@ -1,13 +1,14 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-   
 body {
-    position: relative;
+	position: relative;
+	font-family:"Oxygen";
+}
+
+body.top-fx-menu {
 	padding-top: 50px;
 	padding-bottom: 0;
-	font-family:"Oxygen";
 }
 
 
@@ -431,6 +432,32 @@ div.row > div > div.row, .img-thumb {
 .toc.affix-top {
     position: fixed;
   }
+  
+/*Footnotes*/
+.popover{
+	font-size:1em;
+	min-width:60%;
+}  
+
+#footnotes div {
+padding:5px 10px;
+background-color: #FFF;
+-webkit-transition: background 0.5s linear;
+-moz-transition: background 0.5s linear;
+-ms-transition: background 0.5s linear;
+-o-transition: background 0.5s linear;
+transition: background 0.5s linear;
+}
+
+#footnotes div.selected{
+	background-color: #F3F5FF;
+}
+
+#footnotes {
+	font-size: 0.9em;
+}
+  
+  
 /*Pace.min.js: loader*
 .pace {
   -webkit-pointer-events: none;

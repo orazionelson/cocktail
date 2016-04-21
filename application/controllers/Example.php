@@ -3,17 +3,13 @@
 class Example extends BP_Controller {
 
     public function index()
-    {
-        /* Remember you can change the main template if you need!
-        $this->template = "example-template";
-        */
+    {   
 
         // Define Meta
         $this->title = "Example!";
         $this->description = "A Codeigniter-Boilerplate example";
 
         // Define custom CSS
-        $this->css[] = "bp_homepage.css";
         $this->css[] = "bp_example.css";
 
         // Import Google Font Lobster and Puritan

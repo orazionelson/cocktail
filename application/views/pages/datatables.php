@@ -38,8 +38,9 @@
 		<p>Add the js and the css to the controller</p>
 		<pre>
 // Define custom CSS
-$this->css = array("dataTables.bootstrap.min.css");
-$this->javascript = array('jquery.dataTables.min.js','dataTables.bootstrap.min.js');		
+$this->css[] = "dataTables.bootstrap.min.css";
+$this->javascript[] = 'vendor/jquery.dataTables.min.js';
+$this->javascript[] = 'vendor/dataTables.bootstrap.min.js';		
 		</pre>
 		<p>Then just add the <code>.bp-data-table</code> class to the <code>table</code> in your view.</p>
 		<br>

@@ -162,8 +162,8 @@
 
 		$(selector).on('click', function(e) {
 	
-	   // prevent default anchor click behavior
-	   e.preventDefault();
+			// prevent default anchor click behavior
+			e.preventDefault();
 	
 	   // store hash
 	   var hash = this.hash;
@@ -234,6 +234,7 @@
 /***********************
  * Fullpage plugin
  * set element min-height to 100% of page
+ * should be combined with css background:cover
  * by Alfredo Cosco 2016
  * @orazio_nelson
  * alfredo.cosco@gmail.com
@@ -246,3 +247,107 @@
 	}	
 }( jQuery ));
 		
+		
+/*********************
+ * Footnotes
+ * by Alfredo Cosco 2016
+ * @orazio_nelson
+ * alfredo.cosco@gmail.com
+ ********************/
+(function ( $ ) {
+	$.fn.footnotes = function (options){
+		
+		//default options.
+        var settings = $.extend({
+            viewNotes: true, 		// true,false,'collapse',
+            popover: true,	
+            buttonLabel: "See footnotes",
+            delta: 70, 
+            container: 'body',
+            //popover settings
+            html : true,
+            trigger: "hover",
+			placement: "auto bottom"
+        }, options );
+		
+		var i=1;
+		
+		//Show/hide the footnotes block
+		if(!settings.viewNotes) {
+			settings.popover=true;
+			$('#footnotes').hide();
+			settings.trigger='click';
+			}
+		else if(settings.viewNotes=='collapse'){
+			$('#footnotes').addClass('collapse').before('<a class="btn btn-primary" data-toggle="collapse" href="#footnotes" aria-expanded="false" aria-controls="footnotes">'+settings.buttonLabel+'</a>');
+			}
+		
+		//Build reverse links and fill-in popovers			
+		$('.bs-footnote').each(function (index, value){
+			//wrap the link in <sup> and square brackets
+			$(this).wrap("<sup>").before('[').after(']');
+			//add unique id to your footnote links
+			$(this).attr('id', "bs-footnote-a-"+i);
+			
+			//get the target, or the footnote id			
+			var lnk = $(this).attr('href');
+						
+			//create reverse (bottom-top) link in the footnote
+			var aid = $(this).attr('id');
+			$(lnk).find('span').wrapInner('<a class="bs-footnote-r" id="bs-footnote-r-'+i+'" href="#'+aid+'"></a>');
+
+			//get the footnote content	
+			var fn = $(lnk).html();
+			//add this content to data-content attribute
+			$(this).data('content', fn);
+			
+			//show the footnote as a popover
+			if(settings.popover){
+			$(this).popover({
+				container: settings.container,
+				html : settings.html,
+				trigger: settings.trigger,
+				placement: settings.placement
+				});
+			}
+			
+			//Manage notes view
+			if(settings.viewNotes) {	
+			$(this).on('click', function(e) {
+				e.preventDefault();
+				if(settings.viewNotes=="collapse"){$('.collapse').addClass('in');}
+				
+				var hash = this.hash;				
+				var target = $(hash).offset().top;
+				//console.log(hash);
+				target = target-settings.delta
+				$('html, body').animate({
+					scrollTop: target
+					}, 1000, function(){
+					$("#footnotes div").removeClass('selected');
+					$(lnk).addClass('selected');
+					});
+				});	
+			
+			$('#bs-footnote-r-'+i).on('click', function(e) {
+				e.preventDefault();
+				if(settings.viewNotes=="collapse"){$('.collapse').removeClass('in');}
+				
+				var hash = this.hash;				
+				var target = $(hash).offset().top;
+				target = target-settings.delta
+				$('html, body').animate({
+					scrollTop: target
+					}, 1000, function(){
+					$("#footnotes div").removeClass('selected');
+					});
+				});
+				}		
+		
+		i++;});
+		
+	}
+	//trigger the function
+	//$().footnotes();	
+}( jQuery ));
+

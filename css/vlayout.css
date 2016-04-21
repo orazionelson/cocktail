@@ -1,0 +1,153 @@
+
+#main {
+    padding: 0 15px;
+    min-height: 568px;
+    background-color: #fff;
+}
+
+@media(min-width:768px) {
+    #main {
+        position: inherit;
+        margin: 0 0 0 251px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+    
+    .navbar-header{
+	width:100%;
+	}
+}
+
+nav.navbar{
+	margin-bottom:0;
+	border-radius:0;
+}
+
+
+.sidebar .sidebar-nav.navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.sidebar .sidebar-search {
+    padding: 15px;
+}
+
+.sidebar ul li {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.sidebar ul li a.active {
+    background-color: #eee;
+}
+
+.sidebar .arrow {
+    float: right;
+}
+
+.sidebar .fa.arrow:before {
+    content: "\f104";
+}
+
+.sidebar .active>a>.fa.arrow:before {
+    content: "\f107";
+}
+
+.sidebar .nav-second-level li,
+.sidebar .nav-third-level li {
+    border-bottom: 0!important;
+}
+
+.sidebar .nav-second-level li a {
+    padding-left: 37px;
+}
+
+.sidebar .nav-third-level li a {
+    padding-left: 52px;
+}
+
+@media(min-width:768px) {
+	.sidebar{
+	    z-index: 1;
+        position: absolute;
+		width: 251px;
+	}
+    .sidebar-menu-container {
+        margin-top: 51px;
+    }
+    
+  .offcanvas-button {
+    display: none;
+  }
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+  
+  
+	.offcanvas-button {
+		color: #ccc;
+	    position: relative;
+	    padding: 9px 10px;
+	    margin-top: 8px;
+	    margin-right: 15px;
+	    margin-bottom: 8px;
+	    background-color: transparent;
+	    background-image: none;
+	    border-color: #ddd;
+	    border-radius: 4px;
+	}
+	
+	.offcanvas-button:focus {
+	  outline: 0;
+	}
+	.offcanvas-button .icon-bar {
+	  display: block;
+	  width: 22px;
+	  height: 2px;
+	  border-radius: 1px;
+	  background-color: #888;
+	}
+	.offcanvas-button .icon-bar + .icon-bar {
+	  margin-top: 4px;
+	}  
+}

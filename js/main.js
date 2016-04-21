@@ -90,5 +90,53 @@ $(document).ready(function() {
 
 //Scroller
 $().scroller(".scrollnav",delta);
+//Footnotes
+$().footnotes();
+
+
+//Offcanvas
+if($('[data-offcanvas]')[0]){
+	$('#top-down-header button').hide();
+	
+	$('#navbar').removeClass('navbar-collapse collapse');
+	
+	var offcanvasButton = '<div id="offcanvas-button-container"><button type="button" class="offcanvas-button btn-mobile" data-toggle="offcanvas"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>';
+	
+	$('[data-offcanvas]').each(function () {
+		var toggle = $(this).data('offcanvas');
+		//toggle = 'offcanvas-'+toggle;
+		$(this).closest( '#main-container' )
+		.addClass("row-offcanvas row-offcanvas-"+toggle)
+		.find('#main')
+		.prepend(offcanvasButton)
+		.find('.offcanvas-button')
+		.css('float',toggle);
+		
+		$(this).closest('#sidebar').addClass('sidebar-offcanvas');
+		
+		});
+
+		$('[data-toggle="offcanvas"]').click(function () {
+			$('.row-offcanvas').toggleClass('active')
+	});					
+}
+//else console.log('non ci sta');
+
+//sort list
+$('.sorted').each(function(){
+	var mylist=$(this);
+	var listitems = $(this).find('li').get();
+	
+	listitems.sort(function(a, b) {
+   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+	})	
+	//console.log(listitems);
+	$.each(listitems, function(idx, itm) { 
+		console.log(mylist);
+		mylist.append(itm); });
+});
+//var mylist = $('.sorted');
+//var listitems = mylist.find('li').get();
+//console.log(listitems);
 
 });

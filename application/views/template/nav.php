@@ -19,23 +19,17 @@ else {$anchor='homepage';}
         <li><a href="<?php echo $anchor; ?>#about">About</a></li>
         <li><a href="<?php echo $anchor; ?>#config">Config</a></li>
         <li class="dropdown">
-              <a href="<?php echo base_url()?>examples" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-				<li class="dropdown-header">Components</li>  
-                <li class="<?php echo isActive($page_id,"datatables")?>"><a href="<?php echo base_url()?>datatables">DataTables</a></li>
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages&amp;Prototypes<span class="caret"></span></a>
+              <ul class="dropdown-menu sorted">
+				<li class="<?php echo isActive($page_id,"datatables")?>"><a href="<?php echo base_url()?>datatables">DataTables</a></li>
                 <li class="<?php echo isActive($page_id,"gallery")?>"><a href="<?php echo base_url()?>gallery">Gallery</a></li>
                 <li class="<?php echo isActive($page_id,"footers")?>"><a href="<?php echo base_url()?>footers">Footers</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Pages</li> 
 				<li class="<?php echo isActive($page_id,"example")?>"><a href="<?php echo base_url()?>example">Base Example</a></li>                 
-                <li class="<?php echo isActive($page_id,"automatictoc")?>"><a href="<?php echo base_url()?>automatictoc">Automatic Toc</a></li>
+ 				<li class="<?php echo isActive($page_id,"vlayout")?>"><a href="<?php echo base_url()?>vlayout">Vertical Layout</a></li>                 
+                <li class="<?php echo isActive($page_id,"automatictoc")?>"><a href="<?php echo base_url()?>automatictoc">Automatic Toc</a></li> <li class="<?php echo isActive($page_id,"footnotes")?>"><a href="<?php echo base_url()?>footnotes">Nifty Footnotes</a></li>
                 <li class="<?php echo isActive($page_id,"automatictabs")?>"><a href="<?php echo base_url()?>automatictabs">Automatic Tabs</a></li>
                 <li class="<?php echo isActive($page_id,"portfolio")?>"><a href="<?php echo base_url()?>portfolio">Portfolio</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Helpers</li>
-                <li class="<?php echo isActive($page_id,"prettypre")?>"><a href="<?php echo base_url()?>prettypre">Pretty-pre</a></li>
-                <li class="<?php echo isActive($page_id,"fullpage")?>"><a href="<?php echo base_url()?>fullpage">Fullpage</a></li>
-                <!--li><a href="#">One more separated link</a></li-->
+                <li class="<?php echo isActive($page_id,"helpers")?>"><a href="<?php echo base_url()?>helpers">Helpers</a></li>
 			</ul>
 		</li>
    	  </ul>

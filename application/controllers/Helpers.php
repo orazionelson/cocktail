@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Fullpage extends BP_Controller {
+class Helpers extends BP_Controller {
 
     public function index()
     {
@@ -9,11 +9,11 @@ class Fullpage extends BP_Controller {
         */
 
         // Define Meta
-        $this->title = "Fullpage!";
-        $this->description = "The .fullpage selector";
+        $this->title = "Pretty-pre!";
+        $this->description = "The .pretty-pre selector";
 
         //Somedata for the page.
-        $toView["fullpage"] = '';
+        $toView["pretty"] = '';
 
         /*short cut to load->view("pages/page_name",$content,true)*/
         $this->build_content($toView);

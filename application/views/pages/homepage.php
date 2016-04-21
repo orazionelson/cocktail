@@ -1,7 +1,7 @@
 <div class="clearfix"></div>
 <div id="home" class="jumbotron fullpage">
 	<div class="container text-center jumboheader">
-	<h1>Cocktail</h1>
+	<h1>Cocktail <small>Version 0.0.1 alpha</small></h1>
 	<h2>Codeigniter + HTML5Boilerplate + Bootstrap</h2>
 	</div>
 	<!-- Three columns of text  -->
@@ -29,24 +29,34 @@
 <div id="about" class="container">
 	<article>
 		<h2>About</h2>
-		<p><span class="lead">Cocktail</span> is a fast front-end builder. It takes the basic code by <a href="http://ariok.github.io/codeigniter-boilerplate/">Codeigniter-Boilerplate</a> but upgrades Codeigniter to version 3, HTML5Boileplate to the v. 5 and jQuery to v.1.11.2. Then it adds Bootstrap (v.3) and bundles several scripts to improve your job.</p>
+		<p>Cocktail is a fast front-end builder. It takes the basic code by <a href="http://ariok.github.io/codeigniter-boilerplate/">Codeigniter-Boilerplate</a> but upgrades Codeigniter to version 3, HTML5Boileplate to v. 5. Then it adds Bootstrap (v.3) and bundles several scripts to improve your job.</p>
+		<p>Cocktail is NOT a end user product, at this stage is more or less a bucket of prototypes and scripts built on top of three solid frameworks.</p>
+		<p>The most relevant bundled scripts are:</p>
 		<ul>
-			<li>A minification library to improve your performances in production environment</li>
-			<li>Extend Bootstrap icons with <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome 4.0.5</a></li>
-			<li>Show fancy tables with <a href="https://datatables.net/">DataTables</a></li> 
-			<li>Have nice galleries with <a href="http://ashleydw.github.io/lightbox/">Bootstrap Lightbox</a></li> 
-			<li>Be <em>Cookie law</em> ready with <a href="http://www.primebox.co.uk/projects/jquery-cookiebar/">Jquery CookieBar</a></li>
+		<li>A minification library to improve your performances in production environment</li>
+		<li><a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome 4.0.5</a></li>
+		<li><a href="https://datatables.net/">DataTables</a></li>
+		<li><a href="http://ashleydw.github.io/lightbox/">Bootstrap Lightbox</a></li>
+		<li><a href="http://www.primebox.co.uk/projects/jquery-cookiebar/">Jquery CookieBar</a></li>
 		</ul>
 		<p>Moreover there are some 'ad hoc' templates, helpers and functions for page rendering:</p>
 		<ul>
-			<li>Automatic Toc</li>
-			<li>Automatic Tabs</li>
-			<li>Five Footer Templates</li>
-			<li>Portfolio</li>			
-			<li>.pretty-pre selector</li>
-			<li>.fullpage selector</li>
+		<li>Automatic Toc</li>
+		<li>Automatic Tabs</li>
+		<li>Nifty Footnotes</li>
+		<li>Templates for horizontal and vertical layout</li>
+		<li>Five footer templates</li>
+		<li>A Portfolio template</li>
+		<li>Some nice helpers</li>
 		</ul>
-	</article>
+		<h3>Versions</h3>
+		<ul>
+		<li>Codeigniter 3.0.6</li>
+		<li>Bootstrap 3.3.6</li>
+		<li>HTML5Boilerplate 5.0.3</li>
+		<li>jQuery 1.12.3</li>
+		</ul>
+		</article>
 </div>	
 <div id="config" class="container">
 	<article>
@@ -76,6 +86,17 @@ protected $template = "main";
 
 //Set true if you want a navbar
 protected $hasNav = true;
+
+//Set the default navbar template
+protected $nav = "nav";
+    
+  //Nice to have, 
+  //settings for the vertical navigator layout. 
+  //Set here the default behavior for offcanvas: bool(true|false) 
+  //and sliding direction
+  protected $offcanvas=false;
+  protected $offcanvas_pos='left';
+
 
 //Set true if you want a footer
 protected $hasFooter = true;
