@@ -25,9 +25,7 @@
 		</div> <!--! end of #container -->		
 <?php 
 echo $javascript; //here the js
-if($cookieLaw){
-	 echo "		<script src=\"https://www.google-analytics.com/analytics.js\" async defer></script>";
-	}
+echo $cookies;
 ?>
 
 	</body>

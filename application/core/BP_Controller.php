@@ -16,6 +16,8 @@
  */
 class BP_Controller extends CI_Controller{
     
+    protected $version='0.0.2 alpha';
+    
     //Page info
     protected $status=0; //0=devel, 1=production
     protected $page_id = false;
@@ -30,7 +32,8 @@ class BP_Controller extends CI_Controller{
     protected $offcanvas_pos='left';
     
     protected $hasFooter = true;
-    protected $cookieLaw = true;
+    protected $cookieLaw = true; 
+    protected $cookies = "cookies";
     
     //Page contents
     public $javascript = array('vendor/jquery-1.12.3.min.js','vendor/bootstrap.min.js');
@@ -70,8 +73,11 @@ class BP_Controller extends CI_Controller{
 	    //A.C.: Append here any js related to cookies if cookieLaw is true
 		if($this->cookieLaw){
 		$this->appjs[]='vendor/jquery.cookiebar.js';
-		$this->appjs[]='cookies.js';	
+		//$this->appjs[]='cookies.js';
+		$toCookies['google']='1';
+		$toTpl["cookies"] = $this->load->view("template/cookies",$toCookies,true);	
 		}
+		else $toTpl['cookies']='';
         
         //A.C.: Create jacascript and css strngs, compiled or not       
         

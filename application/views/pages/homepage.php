@@ -1,7 +1,7 @@
 <div class="clearfix"></div>
 <div id="home" class="jumbotron fullpage">
 	<div class="container text-center jumboheader">
-	<h1>Cocktail <small>Version 0.0.1 alpha</small></h1>
+	<h1>Cocktail <small>Version <?php echo $version;?></small></h1>
 	<h2>Codeigniter + HTML5Boilerplate + Bootstrap</h2>
 	</div>
 	<!-- Three columns of text  -->

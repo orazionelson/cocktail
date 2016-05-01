@@ -16,7 +16,7 @@ class Homepage extends BP_Controller {
 
         /*Define single page content as usual*/
         $toView['page_content'] = date("H:i:s");
-        $toView['other_data'] = "";
+        $toView['version'] = $this->version;
         
         /*short cut to load->view("pages/page_name",$content,true)*/
         $this->build_content($toView);
