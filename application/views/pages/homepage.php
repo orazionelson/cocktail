@@ -160,4 +160,3 @@ $this->GFont = array("Lobster","Puritan");
 	</article>
 	
 </div>
-<?php echo $other_data?>
