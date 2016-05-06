@@ -1,6 +1,6 @@
 ## Cocktail
 
-<b>Version 0.0.2 alpha</b>
+<b>Version 0.0.3 alpha</b>
  
 Cocktail is a fast front-end builder. It takes the basic code by [Codeigniter-Boilerplate](http://ariok.github.io/codeigniter-boilerplate/) but upgrades Codeigniter to version 3, HTML5Boileplate to v. 5. Then it adds Bootstrap (v.3) and bundles several scripts to improve your job.#
 
