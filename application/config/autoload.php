@@ -52,7 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('BP_Portfolio','Minifier');
+$autoload['libraries'] = array('BP_Portfolio','Minifier','SimplePie');
 
 
 /*

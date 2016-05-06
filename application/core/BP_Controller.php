@@ -16,7 +16,7 @@
  */
 class BP_Controller extends CI_Controller{
     
-    protected $version='0.0.2 alpha';
+    protected $version='0.0.3 alpha';
     
     //Page info
     protected $status=0; //0=devel, 1=production

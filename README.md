@@ -13,6 +13,7 @@ The most relevant bundled scripts are:
 *   [DataTables](https://datatables.net/)
 *   [Bootstrap Lightbox](http://ashleydw.github.io/lightbox/)
 *   [Jquery CookieBar](http://www.primebox.co.uk/projects/jquery-cookiebar/)
+*	<a href="http://simplepie.org/">SimplePie 1.4</a> to read and create rss/atom feeds
 
 Moreover there are some 'ad hoc' templates, helpers and functions for page rendering:
 
@@ -31,5 +32,8 @@ Moreover there are some 'ad hoc' templates, helpers and functions for page rende
 * jQuery 1.12.3
 
 ### Changelog
+2016/5/6 v.0.0.3a
+Added SimplePie for rss/atom feeds
+
 2016/5/1 v.0.0.2a
 Changed the cookies logic, now they're ruled by the cookies.php template.

@@ -30,6 +30,7 @@ else {$anchor='homepage';}
                 <li class="<?php echo isActive($page_id,"automatictabs")?>"><a href="<?php echo base_url()?>automatictabs">Automatic Tabs</a></li>
                 <li class="<?php echo isActive($page_id,"portfolio")?>"><a href="<?php echo base_url()?>portfolio">Portfolio</a></li>
                 <li class="<?php echo isActive($page_id,"helpers")?>"><a href="<?php echo base_url()?>helpers">Helpers</a></li>
+                <li class="<?php echo isActive($page_id,"Feedreader")?>"><a href="<?php echo base_url()?>feedreader">Feedreader</a></li>
 			</ul>
 		</li>
    	  </ul>

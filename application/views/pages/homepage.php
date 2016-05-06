@@ -38,6 +38,7 @@
 		<li><a href="https://datatables.net/">DataTables</a></li>
 		<li><a href="http://ashleydw.github.io/lightbox/">Bootstrap Lightbox</a></li>
 		<li><a href="http://www.primebox.co.uk/projects/jquery-cookiebar/">Jquery CookieBar</a></li>
+		<li><a href="http://simplepie.org/">SimplePie 1.4</a> to read and create rss/atom feeds</li>
 		</ul>
 		<p>Moreover there are some 'ad hoc' templates, helpers and functions for page rendering:</p>
 		<ul>
