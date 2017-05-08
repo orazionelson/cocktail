@@ -7,43 +7,43 @@
 	<p> Just set in your <b>controller</b> some variables:</p>
 	<pre>
 		<code>
-			//the limit of items read
-			protected $limit=5;
-			//feed source
-			protected $sources="https://github.com/orazionelson.atom";						
-			//feed date format
-			protected $rss_date_format="d/m/y";		
-			//rss cache, don't change unless it is not strictly necessary			
-			protected $rss_cache="rss_cache";
+//the limit of items read
+protected $limit=5;
+//feed source
+protected $sources="https://github.com/orazionelson.atom";						
+//feed date format
+protected $rss_date_format="d/m/y";		
+//rss cache, don't change unless it is not strictly necessary			
+protected $rss_cache="rss_cache";
 		</code>
 	</pre> 
 	<p>Then parse your feed following the examples on <a href="http://simplepie.org/wiki/">Simplepie wiki</a>.</p>
 		<pre><code>
-    public function index()
-    {   
+public function index()
+{   
 
-        // Define Meta
-        $this->title = "Feedreader";
-        $this->description = "A Feedreader for Cocktail";
+	// Define Meta
+	$this->title = "Feedreader";
+	$this->description = "A Feedreader for Cocktail";
 
 
-		$feed = new SimplePie();
-		$feed->set_feed_url($this->sources);
-		$feed->set_cache_location($this->rss_cache);
-		$feed->set_item_limit(5);
-		$feed->init();
-		$feed->handle_content_type();
-	
-        //Somedata for the page.
-        $toView["date_format"] = $this->rss_date_format;
-        $toView["title"] = $feed->get_title();
-        $toView["items"] = $feed->get_items(0, $this->limit);
+	$feed = new SimplePie();
+	$feed->set_feed_url($this->sources);
+	$feed->set_cache_location($this->rss_cache);
+	$feed->set_item_limit(5);
+	$feed->init();
+	$feed->handle_content_type();
 
-        /*short cut to load->view("pages/page_name",$content,true)*/
-        $this->build_content($toView);
+	//Somedata for the page.
+	$toView["date_format"] = $this->rss_date_format;
+	$toView["title"] = $feed->get_title();
+	$toView["items"] = $feed->get_items(0, $this->limit);
 
-        $this->render_page();
-    }		
+	/*short cut to load->view("pages/page_name",$content,true)*/
+	$this->build_content($toView);
+
+	$this->render_page();
+}		
 		</code>
 	</pre>
 	<p>At the end cycle the feed results in the <b>view</b>.</p>

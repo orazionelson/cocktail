@@ -1,6 +1,9 @@
 <?php 
 if($page_id=='homepage'){$anchor='';}
-else {$anchor='homepage';}
+else {
+	$anchor='homepage';
+	$anchor=base_url().$anchor;
+	}
 ?>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -11,7 +14,7 @@ else {$anchor='homepage';}
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	  </button>
-	  <img src="images/bootstrap.png" class="img-circle" alt="logo" height="40" style="margin-top:5px; margin-right:5px;">
+	  <img src="<?php echo base_url()?>images/bootstrap.png" class="img-circle" alt="logo" height="40" style="margin-top:5px; margin-right:5px;">
 	</div>
 	<div id="navbar" class="navbar-collapse collapse">
 	  <ul class="nav scrollnav navbar-nav">
@@ -31,6 +34,7 @@ else {$anchor='homepage';}
                 <li class="<?php echo isActive($page_id,"portfolio")?>"><a href="<?php echo base_url()?>portfolio">Portfolio</a></li>
                 <li class="<?php echo isActive($page_id,"helpers")?>"><a href="<?php echo base_url()?>helpers">Helpers</a></li>
                 <li class="<?php echo isActive($page_id,"Feedreader")?>"><a href="<?php echo base_url()?>feedreader">Feedreader</a></li>
+                <li class="<?php echo isActive($page_id,"Opendataclient")?>"><a href="<?php echo base_url()?>opendataclient">Open Data Client</a></li>
 			</ul>
 		</li>
    	  </ul>

@@ -39,6 +39,22 @@ $(document).ready(function() {
 			});
 		}
 
+//Open data Client
+//local data view, adjust bootstrap template
+$('.opendataTable').closest( ".dataTables_wrapper" ).find('.dt-buttons').addClass('col-md-6 opendataPanelElement');
+$('.opendataTable').closest( ".dataTables_wrapper" ).find('.dataTables_length,.dataTables_filter').addClass('col-md-3 opendataPanelElement');
+$('.opendataTable').closest( ".dataTables_wrapper" )
+.each(function(){
+	$(this).find( ".opendataPanelElement" ).wrapAll( "<div class='row opendataPanel' />");
+});
+//Add the button for Json
+var pagetitle=$('title').text();
+$('.dt-buttons.opendataPanelElement').each(function(){	
+	var dest = $(this).closest( ".dataTables_wrapper" ).find('.opendataTable').data('dest');
+	//console.log(origin);
+	$(this).append('<a class="btn btn-default" href="'+dest+'">Json</a>');
+	
+	})
 //Lightbox
 	// delegate calls to data-toggle="lightbox"
 	$(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
@@ -132,7 +148,6 @@ $('.sorted').each(function(){
 	})	
 	//console.log(listitems);
 	$.each(listitems, function(idx, itm) { 
-		console.log(mylist);
 		mylist.append(itm); });
 });
 //var mylist = $('.sorted');

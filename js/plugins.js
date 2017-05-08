@@ -21,7 +21,7 @@
     }
 }());
 
-// Place any jQuery/helper plugins in here.
+// Place any jQuery/helper plugins here.
 /*****
  * Make a pretty 'pre' for your code
  * by Alfredo Cosco 2016
@@ -155,13 +155,13 @@
  ********************/
 (function ( $ ) {
 	$.fn.scroller = function (selector,delta){
-		//console.log(selector);
+		
 		var selector="ul"+selector+" li a[href^='#']";
 		
 		if(!delta) {var delta=50;}
-
+console.log(selector);
 		$(selector).on('click', function(e) {
-	
+	//console.log(selector);
 			// prevent default anchor click behavior
 			e.preventDefault();
 	
@@ -212,8 +212,10 @@
 		.find('ul.nav').after('<div class="tab-content" />');
 
 		$(this).find(selector).each(function() {
-			var label = '<li role="presentation"><a href="#'+$(this).text()+'" aria-controls="'+$(this).text()+'" role="tab" data-toggle="'+nav+'">'+$(this).text()+'</a></li>';		
-			var content= '<div role="tabpanel" class="tab-pane '+fading+'" id="'+$(this).text()+'">'+$(this).next().html()+'</div>';	
+			var connector= $(this).text();
+			connector=connector.replace(/ /g, '');
+			var label = '<li role="presentation"><a href="#'+connector+'" aria-controls="'+connector+'" role="tab" data-toggle="'+nav+'">'+$(this).text()+'</a></li>';		
+			var content= '<div role="tabpanel" class="tab-pane '+fading+'" id="'+connector+'">'+$(this).next().html()+'</div>';	
 			labels.push(label);
 			contents.push(content);
 			i++

@@ -13,10 +13,10 @@ class Datatables extends BP_Controller {
         $this->title = "DataTables";
         $this->description = "DataTables bundle!";
 
-        // Define custom CSS
-        $this->css[] = "dataTables.bootstrap.min.css";
+        // Define dataTables CSS and JS
+        $this->css[] = "datatables.min.css";
 		$this->javascript[] = 'vendor/jquery.dataTables.min.js';
-		$this->javascript[] = 'vendor/dataTables.bootstrap.min.js';
+
 
         //set up the Data table configuration array
         $this->datatables=array(
@@ -53,5 +53,5 @@ class Datatables extends BP_Controller {
     }
     
 }
-/*End of file example.php*/
-/*Location .application/controllers/example.php*/
+/*End of file*/
+

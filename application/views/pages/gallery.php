@@ -6,25 +6,19 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
-				<a href="http://41.media.tumblr.com/f37ac708134914c471073e4c0b47328d/tumblr_mrn3dc10Wa1r1thfzo8_1280.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="People walking down stairs" class="col-sm-4">
-					<img src="//41.media.tumblr.com/f37ac708134914c471073e4c0b47328d/tumblr_mrn3dc10Wa1r1thfzo8_1280.jpg" class="img-responsive img-thumbnail">
+				<a href="images/pozzuoli/land1.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Pozzuoli Harbour" class="col-sm-4">
+					<img src="images/pozzuoli/land1.jpg" class="img-responsive img-thumbnail">
 				</a>
-				<a href="http://41.media.tumblr.com/838b44224e39c30cd43490deb11b919d/tumblr_mrn3dc10Wa1r1thfzo1_1280.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Man getting wet" class="col-sm-4">
-					<img src="//41.media.tumblr.com/838b44224e39c30cd43490deb11b919d/tumblr_mrn3dc10Wa1r1thfzo1_1280.jpg" class="img-responsive img-thumbnail">
-				</a>
-				<a href="http://41.media.tumblr.com/e06a3513b0b36843f54bee99aeac689a/tumblr_mrn3dc10Wa1r1thfzo2_1280.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Someone lost their dress" class="col-sm-4">
-					<img src="//41.media.tumblr.com/e06a3513b0b36843f54bee99aeac689a/tumblr_mrn3dc10Wa1r1thfzo2_1280.jpg" class="img-responsive img-thumbnail">
+				<a href="images/pozzuoli/land2.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Pozzuoli Harbour 2" class="col-sm-4">
+					<img src="images/pozzuoli/land2.jpg" class="img-responsive img-thumbnail">
 				</a>
 			</div>
 			<div class="row">
-				<a href="http://41.media.tumblr.com/9d3e6a9c89a856a2ad0be3ab4ca598b2/tumblr_mrn3dc10Wa1r1thfzo4_1280.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="Big ass waterfall- using footer instead of title" class="col-sm-4">
-					<img src="//41.media.tumblr.com/9d3e6a9c89a856a2ad0be3ab4ca598b2/tumblr_mrn3dc10Wa1r1thfzo4_1280.jpg" class="img-responsive img-thumbnail">
+				<a href="images/pozzuoli/land3.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="Pozzuoli harbour 3" class="col-sm-4">
+					<img src="images/pozzuoli/land3.jpg" class="img-responsive img-thumbnail">
 				</a>
-				<a href="http://41.media.tumblr.com/9d3e6a9c89a856a2ad0be3ab4ca598b2/tumblr_mrn3dc10Wa1r1thfzo4_1280.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Cool bottle" data-footer="Now fill it with whiskey" class="col-sm-4">
-					<img src="//41.media.tumblr.com/9d3e6a9c89a856a2ad0be3ab4ca598b2/tumblr_mrn3dc10Wa1r1thfzo4_1280.jpg" class="img-responsive img-thumbnail">
-				</a>
-				<a href="http://36.media.tumblr.com/de356cd6570d7c26e73979467f296f67/tumblr_mrn3dc10Wa1r1thfzo6_1280.jpg" data-toggle="lightbox" data-gallery="multiimages" class="col-sm-4">
-					<img src="//36.media.tumblr.com/de356cd6570d7c26e73979467f296f67/tumblr_mrn3dc10Wa1r1thfzo6_1280.jpg" class="img-responsive img-thumbnail">
+				<a href="images/pozzuoli/land4.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="Pozzuoli Harbour 4" data-footer="The sunset" class="col-sm-4">
+					<img src="images/pozzuoli/land4.jpg" class="img-responsive img-thumbnail">
 				</a>
 			</div>
 		</div>

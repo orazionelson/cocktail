@@ -16,7 +16,12 @@
 		    ?>
 			</header>
 			<div id="main" role="main">
+			<div class="container">
+			<?php 
+			echo $breadcrumbs;?>
+			</div>	
 		    <?php
+		    
 		    /* codeigniter-boilerplate: content from single views *********************/
 		    echo $content
 		    ?>

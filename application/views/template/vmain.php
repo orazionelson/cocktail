@@ -20,6 +20,7 @@
 			</div>
 			<div id="main" role="main">
 			    <?php
+			    echo $breadcrumbs;
 			    /* codeigniter-boilerplate: content from single views *********************/
 			    echo $content
 			    ?>					

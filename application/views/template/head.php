@@ -21,7 +21,7 @@
 		<link rel="icon" href="favicon.ico">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <?php echo $css; //Here all the css ?>
-		<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+		<script src="<?php echo base_url();?>js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 		
 		  <?php /* codeigniter-boilerplate: Google Fonts ****************************/ ?>
 		  <?php foreach($GFont as $f):?>

@@ -19,7 +19,7 @@
 
 	<div class="footer-center col-md-4">
 
-          <img class="img-circle center-block" src="images/bootstrap.png" alt="Serve with Bootstrap" width="140" height="140">
+          <img class="img-circle center-block" src="<?php echo base_url()?>images/bootstrap.png" alt="Serve with Bootstrap" width="140" height="140">
 	</div>
 
 	<div class="footer-right col-md-4">

@@ -30,6 +30,18 @@
 	<article>
 		<h2>About</h2>
 		<p>Cocktail is a fast front-end builder. It takes the basic code by <a href="http://ariok.github.io/codeigniter-boilerplate/">Codeigniter-Boilerplate</a> but upgrades Codeigniter to version 3, HTML5Boileplate to v. 5. Then it adds Bootstrap (v.3) and bundles several scripts to improve your job.</p>
+		<div class="well text-info">
+			<p class="text-danger">New in 0.0.6 version, 2017!</p>
+			<p>CodeIgniter upgrade to 3.1.4</p>
+			<p>jQuery upgrade to 2.2.4</p>
+			<p>Libraries: BP_Opendataclient.php</p>
+			<p>Controllers: Opendataclient.php</p>
+			<p>Json endpoint: Json.php</p>
+			<p>Helpers: breadcrumbs_heplper.php (source: https://github.com/mmkjony/Codeigniter-Breadcrumb-Helper-for-Bootstrap/)</p>
+			<p>Upgrades: new build for datatables js</p>
+			<p>Some corrections in templates and views</p>
+		</div>
+		
 		<p>Cocktail is NOT a end user product, at this stage is more or less a bucket of prototypes and scripts built on top of three solid frameworks.</p>
 		<p>The most relevant bundled scripts are:</p>
 		<ul>
@@ -48,14 +60,15 @@
 		<li>Templates for horizontal and vertical layout</li>
 		<li>Five footer templates</li>
 		<li>A Portfolio template</li>
+		<li>An Open Data Client with a json endpoint</li>
 		<li>Some nice helpers</li>
 		</ul>
 		<h3>Versions</h3>
 		<ul>
-		<li>Codeigniter 3.0.6</li>
+		<li>Codeigniter 3.1.4</li>
 		<li>Bootstrap 3.3.6</li>
 		<li>HTML5Boilerplate 5.0.3</li>
-		<li>jQuery 1.12.3</li>
+		<li>jQuery 2.2.4</li>
 		</ul>
 		</article>
 </div>	
@@ -66,8 +79,8 @@
 			<h3>CI Configurations</h3>
 			<p>Codeigniter configuration for Boilerplate starts with:</p>
 			<ul>
-				<li>Autoload: url helper</li>
-				<li>Autoload: 'BP_Portfolio' and 'Minifier' libraries</li>
+				<li>Autoload: url and breadcrumbs helper</li>
+				<li>Autoload: 'BP_Portfolio', 'BP_Opendata', 'SimplePie(Rss feed)' and 'Minifier' libraries</li>
 				<li>Routes: default_controller = "homepage"</li>
 				<li>Index.php: subclass_prefix = "BP_"</li>
 				<li>Base url: http://localhost/cocktail</li>
@@ -77,48 +90,49 @@
 			<h3>Cocktail Configurations</h3>			
 			<p>Set up main configs for your application in: <code>application/core/BP_controller.php</code></p>
 			<pre><code>
-//Set 0 for development or 1 for production
-//the production environment combine and 
-//minify the css and js				
-protected $status=1; //0=devel, 1=production
-
-//Set your template 
+//Start here your config    
+//Status: Set 0 for development or 1 for production
+//the production environment combines and 
+//minify the css and js		    
+protected $status=0; //0=devel, 1=production
+	
+//Set your default template 
+//cocktail bundles two standard templates: main and vmain
 protected $template = "main";
 
 //Set true if you want a navbar
 protected $hasNav = true;
-
 //Set the default navbar template
+//cocktail bundles two standard templates: nav and vnav
 protected $nav = "nav";
+
+//Set if you want to see or not breadcrumbs 
+protected $hasBreadcrumbs=true;
+
+//If you use the vertical navigator layout
+//set here the offcanvas : bool(true|false)
+protected $offcanvas=false;
+protected $offcanvas_pos='left';
+  
+//Page Meta
+public $title = false;
+public $description = false; 
+	
+//Page contents
+public $javascript = array('vendor/jquery-2.2.4.min.js','vendor/bootstrap.min.js');
+public $appjs = array('plugins.js','main.js');
+public $css = array('bootstrap.min.css', 'bootstrap-theme.css','font-awesome.min.css');
+public $appcss=array('main.css');
+public $GFont = array('Oxygen','Cookie');
+public $content = false;
     
-  //Nice to have, 
-  //settings for the vertical navigator layout. 
-  //Set here the default behavior for offcanvas: bool(true|false) 
-  //and sliding direction
-  protected $offcanvas=false;
-  protected $offcanvas_pos='left';
-
-
-//Set true if you want a footer
+//Set true if you want a footer   
 protected $hasFooter = true;
 
 //Set true to activate cookieLaw plugin
 // and cookie.js file
-protected $cookieLaw = true;
-
-//Page contents
-//The base third-party javascript files common to all the site
-public $javascript = array('vendor/jquery-1.11.2.js','vendor/bootstrap.min.js');
-//The base internal javascript files common to all the site
-public $appjs = array('plugins.js','main.js');
-
-//The base third-party css files common to all the site
-public $css = array('bootstrap.min.css', 'bootstrap-theme.css','font-awesome.min.css');
-//The base internal css files common to all the site
-public $appcss=array('main.css');
-
-//GFonts common to all the site
-public $GFont = array('Oxygen','Cookie');
+protected $cookieLaw = true; 
+protected $cookies = "cookies";
 			</code></pre>
 		</div>
 		<div class="well">

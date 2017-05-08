@@ -15,38 +15,58 @@
  * @author Alfredo Cosco alfredo.cosco@gmail.com
  */
 class BP_Controller extends CI_Controller{
-    
-    protected $version='0.0.3 alpha';
-    
     //Page info
-    protected $status=0; //0=devel, 1=production
+    
+    //Don't touch
+    protected $version='0.0.6 alpha';
     protected $page_id = false;
     protected $view = false;
+     
+    //Start here your config    
+	//Status: Set 0 for development or 1 for production
+	//the production environment combines and 
+	//minify the css and js		    
+    protected $status=0; //0=devel, 1=production
+        
+    //Set your default template 
+    //cocktail bundles two standard templates: main and vmain
     protected $template = "main";
+    
+	//Set true if you want a navbar
     protected $hasNav = true;
+    //Set the default navbar template
+    //cocktail bundles two standard templates: nav and vnav
     protected $nav = "nav";
     
-    //for the vertical navigator layout
+    //Set if you want to see or not breadcrumbs 
+    protected $hasBreadcrumbs=true;
+    
+    //If you use the vertical navigator layout
     //set here the offcanvas : bool(true|false)
     protected $offcanvas=false;
     protected $offcanvas_pos='left';
-    
-    protected $hasFooter = true;
-    protected $cookieLaw = true; 
-    protected $cookies = "cookies";
-    
+      
+    //Page Meta
+    public $title = false;
+    public $description = false; 
+        
     //Page contents
-    public $javascript = array('vendor/jquery-1.12.3.min.js','vendor/bootstrap.min.js');
+    public $javascript = array('vendor/jquery-2.2.4.min.js','vendor/bootstrap.min.js');
     public $appjs = array('plugins.js','main.js');
     public $css = array('bootstrap.min.css', 'bootstrap-theme.css','font-awesome.min.css');
     public $appcss=array('main.css');
     public $GFont = array('Oxygen','Cookie');
     public $content = false;
-    //Page Meta
-    public $title = false;
-    public $description = false;
-
-	//More
+	    
+	//Set true if you want a footer   
+	protected $hasFooter = true;
+	
+	//Set true to activate cookieLaw plugin
+	// and cookie.js file
+    protected $cookieLaw = true; 
+    protected $cookies = "cookies";
+    
+	//More, don't touch
 	public $datatables = array();
 	public $controller;
 	        
@@ -69,7 +89,7 @@ class BP_Controller extends CI_Controller{
     public function render_page(){
 	
         //Setup template content
-	
+	//$breadcrumbs=new Breadcrumbs();
 	    //A.C.: Append here any js related to cookies if cookieLaw is true
 		if($this->cookieLaw){
 		$this->appjs[]='vendor/jquery.cookiebar.js';
@@ -107,6 +127,19 @@ class BP_Controller extends CI_Controller{
             $toTpl["nav"] = $this->load->view("template/".$this->nav,$toMenu,true);
         }
         /*eo menu*/
+        
+        /*Breadcrumbs*/
+        /*Link: https://github.com/mmkjony/Codeigniter-Breadcrumb-Helper-for-Bootstrap*/
+        $toTpl["breadcrumbs"]='';
+         if($this->hasBreadcrumbs){
+	        $this->load->helper("breadcrumb");
+			if($this->get_page_id()!='homepage'){
+				$toTpl["breadcrumbs"]=ci_breadcrumb();
+				}
+			//else $toTpl["breadcrumbs"]='';
+		}
+		
+        
         
         /* Footer: to avoid use a footer hasFooter to false
          * and remove $footer reference from templates (i.e. from views/template/main.php)*/
@@ -194,7 +227,64 @@ class BP_Controller extends CI_Controller{
 			$script_string=$opentag.base_url().$type."_cache/".$cache_file.$closetag;	 
 		}
 	return $script_string;			
-	}		
+	}
+	
+
+
+	
+	public function createOpendata(){
+		$myopendata=new BP_Opendataclient;
+		$myopendata->opendata=$this->opendata;
+		$opendata=$myopendata->opendata;
+		
+		$source=$opendata['source'];
+		$mode=$opendata['mode'];
+		$sheetId=$opendata['sheetId'];
+		//var_dump($opendata);
+		$result='';
+		switch($source){
+			case "local":
+				$this->css[] = "datatables.min.css";
+				$this->javascript[] = 'vendor/jquery.dataTables.min.js';  
+				
+				if(strlen(trim($sheetId)==0)){
+					$sheetId="data/opendata";
+					}
+				
+				if(strlen(trim($mode)==0) AND !is_file($sheetId."/".$mode)){
+					$mode='*.csv';
+					}
+				$result.=$myopendata->localGetView($sheetId,$mode);
+			break;
+			case "gs":				 
+				 switch($opendata['mode']){
+					case "view":
+						$result.=$myopendata->gsGetMainInfo($sheetId);
+						$result.=$myopendata->gsGetView($sheetId);
+						$result.="</div>";
+					break;
+					case "download":
+						$info=$myopendata->getInfo($sheetId);
+						$result.=$myopendata->gsGetMainInfo($sheetId);
+						$result.="</div>";
+						$result.=$myopendata->gsGetDownloadEntire($sheetId);
+						$result.=$myopendata->gsGetDownloadSingleSheet($info['sheets']);
+						
+					break;
+					default:
+						$info=$myopendata->getInfo($sheetId);
+						$result.=$myopendata->gsGetMainInfo($sheetId);
+						$result.=$myopendata->gsGetView($sheetId);
+						$result.="</div>";
+						$result.=$myopendata->gsGetDownloadEntire($sheetId);
+						$result.=$myopendata->gsGetDownloadSingleSheet($info['sheets']);
+					break;
+				}
+			}
+		return $result;
+		}	
+	
+			
 }
 
 /*End of file BP_Controller.php*/

@@ -1,4 +1,5 @@
 <div class="clearfix"></div>
+<div class="container-fluid">
 <h2>Vertical menu</h2>
 <p>Ovverride settings at page controller level is easy. Just add in your controller code:</p>
 <pre>
@@ -64,3 +65,4 @@ class Vmenu extends BP_Controller {
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum quis nibh vitae viverra. Donec sit amet aliquam ligula, non suscipit erat. Morbi cursus sit amet erat a cursus. Praesent dui nibh, eleifend nec vulputate vel, auctor sed quam. Aenean massa magna, fermentum et sagittis at, fringilla at sapien. Mauris bibendum lectus nibh, at consectetur nulla viverra eu. Quisque aliquet neque vitae convallis placerat. Etiam et commodo sapien, vel consectetur felis. Sed iaculis rutrum pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus. In interdum eget tortor sit amet mattis. Curabitur non eros ligula. Duis nibh mauris, tincidunt sed commodo ac, lobortis sit amet orci. Maecenas rhoncus neque nec vestibulum tincidunt. Morbi ex neque, luctus sit amet nibh sed, ornare imperdiet nisl. Praesent venenatis gravida mollis. Duis nec maximus sem, non efficitur velit. Fusce dictum dolor cursus, vehicula neque sed, venenatis augue. Donec non turpis pharetra, aliquam ante et, volutpat sapien. Sed ornare, erat et faucibus dictum, libero urna sagittis ex, eget consequat felis tellus id risus. Aliquam et posuere tortor. Nullam convallis cursus porttitor. Aliquam auctor eget tortor sit amet auctor.
 </p>
+</div>
