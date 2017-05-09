@@ -27,5 +27,5 @@
 		  <?php foreach($GFont as $f):?>
 		<link  href="http://fonts.googleapis.com/css?family=<?php echo rawurlencode($f)?>" rel="stylesheet" type="text/css" >
 		  <?php endforeach;?>
-		  
+		<meta name="Generator" content="cocktail <?php echo $version;?>" />  
 	</head>

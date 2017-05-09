@@ -105,6 +105,7 @@ class BP_Controller extends CI_Controller{
         $toHead["description"] = $this->description;
         $toHead["css"] = $this->get_script_string();
         $toHead["GFont"] = $this->GFont;
+        $toHead["version"] = $this->version;
         
         $toTpl["head"] = $this->load->view("template/head",$toHead,true);
 
